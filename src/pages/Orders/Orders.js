@@ -65,15 +65,25 @@ export const Orders = () => {
                 `}</style>
                 <div className='beverages'>
                     <img src={beverageIcon} alt="beverage icon" className="beverageIcon"></img>
-                    {beverages.map(products => <ProductBox product={products.name} key={products._id}></ProductBox>)}
+                    {beverages.map(products => <ProductBox product={products.name} key={products._id} ></ProductBox>)}
                 </div>
                 <div className='meal'>
                     <img src={mealIcon} alt="meal icon" className="mealIcon"></img>
-                    {meal.map(products => <ProductBox product={products.name} key={products._id}></ProductBox>)}
+                    {meal.map(products => <ProductBox product={products.name} key={products._id} ></ProductBox>)}
                 </div>
             </div>
         );
     }
+
+    const [ values, setValues ] = useState({});
+
+    const handleVerify = () => {
+        const tableInput = document.getElementById('tableNum');
+        setValues('table', tableInput.value);
+        console.log(values);
+    }
+
+
 
     return (
         <>
@@ -91,7 +101,10 @@ export const Orders = () => {
             </div>
             {menu === 'breakfast' ? breakfastMenu() : dinnerMenu()}
             
-            <button className="verify-order-btn" onClick={() => navigate('/verify-order')}>
+            <button className="verify-order-btn" onClick={() => {
+                //navigate('/verify-order')
+                handleVerify()
+                }}>
                 <img src={cart} alt="shopping cart icon" className="cart-icon"></img>
                 Verify the order
             </button>
