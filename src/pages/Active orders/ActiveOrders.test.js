@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { ActiveOrders } from './ActiveOrders';
 
 describe('Active orders screen', () => {
+
     it('Renders the whole component', () => {
         render(<ActiveOrders />);
     });
@@ -17,7 +18,7 @@ describe('Active orders screen', () => {
         render(<ActiveOrders />);
         screen.getByText("Copyright © 2022 Burger Queen. All rights reserved.")
     });
-    it('Does not render tables', () => {
+    it('Does not render tables when no info is passed', () => {
         render(<ActiveOrders />);
         const btnTable = screen.queryByText("Table: ")
         expect(btnTable).not.toBeInTheDocument()
