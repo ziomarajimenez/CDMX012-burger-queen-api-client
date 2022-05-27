@@ -11,8 +11,6 @@ export const VerifyOrder = () => {
     const location = useLocation();
     const order = location.state.order;
 
-    //console.log(order);
-
     const modifyOrder = () => {
         navigate('/orders', {
             state: {

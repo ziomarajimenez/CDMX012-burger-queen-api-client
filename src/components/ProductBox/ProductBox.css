@@ -32,8 +32,12 @@
 
 .quantity {
     background-color: #FFFFFF;
-    height: 1.5rem;
-    width: 4rem;
+    border: none;
+    border-radius: 0;
+    height: 1.48rem;
+    width: 3rem;
+    text-align: center;
+    padding: 0;
 }
 
 p {

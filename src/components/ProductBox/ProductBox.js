@@ -7,7 +7,6 @@ export const ProductBox = (props) => {
 
     for(let i = 0; i < props.orderProducts.length; i++){
         if(props.product === props.orderProducts[i].product && props.orderProducts[i].qty > 0){
-            console.log(props.orderProducts[i].qty)
             initialQuantity = props.orderProducts[i].qty;
         }
     }
@@ -40,22 +39,12 @@ export const ProductBox = (props) => {
         changeProductQuantity(parseInt(e.target.value));
     }
 
-/*     for(let i = 0; i < props.array.length; i++){
-        if(props.product === props.array[i].product && props.array[i].hasOwnProperty('qty')){
-            setQuantity(props.array[i].qty);
-        } else if(props.product === props.array[i].product && quantity !== props.array[i].qty){
-            props.array[i].qty = quantity;
-        } 
-    } */
-
     return (
         <div className='productContainer'>
             <p className='product'>{props.product}</p>
             <div className='quantityContainer'>
                 <button className='setQuantity' onClick={() => decrement()}>-</button>
-                <div className='quantity'>
-                    <input type='number' onChange={handleQuantity} value={quantity}></input>
-                </div>
+                <input className='quantity' type='number' onChange={handleQuantity} value={quantity}></input>
                 <button className='setQuantity' onClick={() => increment()}>+</button>
             </div>
         </div >
