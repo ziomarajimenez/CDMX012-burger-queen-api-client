@@ -1,10 +1,10 @@
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header/header";
 import { Footer } from "../../components/Footer/footer";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import './Orders.css'
 import cart from '../../assets/Shopping Cart.png';
-import { Menu } from "../../components/Menus";
+import { Menu } from "../../components/Menus/Menus";
 import { ErrorModal } from "../../components/ErrorModal/ErrorModal";
 
 export const Orders = () => {
