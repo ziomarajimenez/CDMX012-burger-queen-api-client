@@ -20,6 +20,8 @@ export const ActiveOrders = () => {
             })
     }, [])
 
+    // console.log(orders);
+
     const getTableNumber = () => {
         const userId = currentUser().uid
         const tables = orders.filter(order => { return order.userId === userId });

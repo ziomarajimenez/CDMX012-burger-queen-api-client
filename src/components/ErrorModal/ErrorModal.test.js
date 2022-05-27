@@ -1,3 +1,4 @@
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { ErrorModal } from './ErrorModal';
 
@@ -6,7 +7,7 @@ describe('Error modal renders correctly', () => {
     const open = true;
     const close = jest.fn();
 
-    it('renders correctly', () => {
+    it('Renders modal correctly', () => {
         render(<ErrorModal
             open={open}
             onClose={close}
@@ -14,7 +15,7 @@ describe('Error modal renders correctly', () => {
         ></ErrorModal>)
     });
 
-    it('does not render with the state is false', () => {
+    it('Does not render when the state is false', () => {
         const isOpen = false;
 
         render(<ErrorModal
@@ -25,16 +26,16 @@ describe('Error modal renders correctly', () => {
         expect(userEmail).not.toBeInTheDocument();
     });
 
-    it('calls the close function on click', () => {
+    it('Calls the close function on click', () => {
 
-        const isOpen = false;
+        const isOpen = true;
         render(<ErrorModal
             open={isOpen}
             onClose={close}
         ></ErrorModal>)
-
         const closeBtn = screen.getByText('X');
         fireEvent.click(closeBtn);
         expect(close).toHaveBeenCalled();
     });
 })
+
