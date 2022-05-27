@@ -21,6 +21,10 @@ export const VerifyOrder = () => {
         });
     }
 
+    const filtered = order.products.filter((product) => {
+        return product.qty > 0 ;
+    });
+
     const [total, setTotal] = useState('0')
 
     useEffect(() => {
@@ -52,7 +56,7 @@ export const VerifyOrder = () => {
                 id: lastOrder.id + 1,
                 userId: currentUser().uid,
                 table: order.client,
-                products: order.products,
+                products: filtered,
                 status: "sent",
                 dateEntry: new Date().getTime(),
                 dateProcessed: ""
@@ -78,7 +82,7 @@ export const VerifyOrder = () => {
 
             <section className="order-summary">
                 <div className="summary-grid">
-                    {order.products.map((product, index) => {
+                    {filtered.map((product, index) => {
                         return <div key={index} className="product-in-list">
                             <span className="qty"> ( {product.qty} ) </span>
                             <span className="prod-name"> {product.product} </span>

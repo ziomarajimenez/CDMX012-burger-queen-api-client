@@ -2,27 +2,17 @@ import React, { useState } from 'react';
 import './ProductBox.css';
 
 export const ProductBox = (props) => {
-    const [quantity, setQuantity] = useState(0);
 
-/*     switch(props.orderProducts.hasOwnProperty('products')){
-        default:
-            for(let i = 0; i < props.orderProducts.products.length; i++){
-                if(props.product === props.orderProducts.products[i].product && props.orderProducts.products[i].hasOwnProperty('qty')){
-                    setQuantity(props.orderProducts.products[i].qty);
-                }
-            }
-        break;
+    let initialQuantity = 0;
 
-        case false:
-            for(let i = 0; i < props.orderProducts.length; i++){
-                if(props.product === props.orderProducts[i].product && quantity !== props.orderProducts[i].qty){
-                    props.orderProducts[i].qty = quantity;
-                }
-            }
-        break;
-    } */
+    for(let i = 0; i < props.orderProducts.length; i++){
+        if(props.product === props.orderProducts[i].product && props.orderProducts[i].qty > 0){
+            console.log(props.orderProducts[i].qty)
+            initialQuantity = props.orderProducts[i].qty;
+        }
+    }
 
-    console.log('PRODUCTBOX', props.orderProducts);
+    const [quantity, setQuantity] = useState(initialQuantity);
 
     const changeProductQuantity = (newQuantity) => {
         for(let i = 0; i < props.orderProducts.length; i++){
@@ -45,6 +35,11 @@ export const ProductBox = (props) => {
         changeProductQuantity(newQuantity);
     }
 
+    const handleQuantity = (e) => {
+        setQuantity(parseInt(e.target.value));
+        changeProductQuantity(parseInt(e.target.value));
+    }
+
 /*     for(let i = 0; i < props.array.length; i++){
         if(props.product === props.array[i].product && props.array[i].hasOwnProperty('qty')){
             setQuantity(props.array[i].qty);
@@ -59,7 +54,7 @@ export const ProductBox = (props) => {
             <div className='quantityContainer'>
                 <button className='setQuantity' onClick={() => decrement()}>-</button>
                 <div className='quantity'>
-                    <p>{quantity}</p>
+                    <input type='number' onChange={handleQuantity} value={quantity}></input>
                 </div>
                 <button className='setQuantity' onClick={() => increment()}>+</button>
             </div>
