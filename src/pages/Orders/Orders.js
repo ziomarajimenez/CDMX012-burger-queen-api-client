@@ -28,12 +28,15 @@ export const Orders = () => {
 
     let initialTable = '';
 
+    let initialMenu = 'breakfast';
+
     if(location.state !== null){
         orderProducts = location.state.order.products;
-        initialTable = location.state.order.client
+        initialTable = location.state.order.client;
+        initialMenu = location.state.order.menu;
     }
 
-    const [menu, setMenu] = useState('breakfast');
+    const [menu, setMenu] = useState(initialMenu);
     const [table, setTable] = useState(initialTable);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -90,6 +93,7 @@ export const Orders = () => {
                     navigate('/verify-order', {
                         state: {
                             order: {
+                                menu: menu,
                                 products: orderProducts,
                                 client: table
                             }
