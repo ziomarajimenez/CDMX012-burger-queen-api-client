@@ -5,11 +5,16 @@ import { useState, useEffect } from "react";
 import './VerifyOrder.css';
 import arrow from '../../assets/flecha-izquierda.png';
 import { currentUser } from "../../lib/firebaseAuth";
+import { SentModal } from '../../components/SentModal/SentModal'
 
 export const VerifyOrder = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const order = location.state.order;
+
+    //console.log(order);
+    const [ isOpenModal, setIsOpenModal ] = useState(false)
+
 
     const modifyOrder = () => {
         navigate('/orders', {
@@ -62,7 +67,8 @@ export const VerifyOrder = () => {
         };
         fetch('http://localhost:3333/orders', requestOptions)
             .then(response => response.json())
-            .then(() => navigate('/'))
+            .then(() => setIsOpenModal(true))
+            /* .then(() => navigate('/')) */
             .catch(res => console.log(res))
     }
 
@@ -92,7 +98,10 @@ export const VerifyOrder = () => {
                 <p className="order-total"><span className="total">Total:</span> ${total}</p>
                 <button className="send-kitchen" onClick={() => saveOrder(order)}>Send to the kitchen</button>
             </section>
-
+            <SentModal open={isOpenModal} onClose={() => {
+                setIsOpenModal(false);
+                navigate('/');
+                }}/>
             <Footer />
         </div>
     )

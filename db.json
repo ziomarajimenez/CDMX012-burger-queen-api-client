@@ -223,16 +223,21 @@
     {
       "id": 6,
       "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "67",
+      "table": "9",
       "products": [
         {
-          "product": "Coffee with milk",
-          "price": 7,
-          "qty": 2
+          "product": "Water 500 ml",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Double burger",
+          "price": 15,
+          "qty": 1
         }
       ],
       "status": "sent",
-      "dateEntry": 1653664946918,
+      "dateEntry": 1653679607849,
       "dateProcessed": ""
     },
     {
