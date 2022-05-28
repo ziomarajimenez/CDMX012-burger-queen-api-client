@@ -24,24 +24,25 @@ export const Orders = () => {
             })
     }, [])
 
-    const [menu, setMenu] = useState('breakfast');
+    let orderProducts = products.map((product) => {return {product: product.name, price: product.price}});
 
-    const [table, setTable] = useState('');
+    let initialTable = '';
+
+    let initialMenu = 'breakfast';
+
+    if(location.state !== null){
+        orderProducts = location.state.order.products;
+        initialTable = location.state.order.client;
+        initialMenu = location.state.order.menu;
+    }
+
+    const [menu, setMenu] = useState(initialMenu);
+    const [table, setTable] = useState(initialTable);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleChangeTable = (e) => {
         setTable(e.target.value)
     }
-
-    let orderProducts = products.map((product) => {return {product: product.name, price: product.price}});
-
-    let order = { products: orderProducts, client: table };
-    
-    if(location.state !== null){
-        orderProducts = location.state.order;
-    }
-
-    console.log('ORDERS', orderProducts);
 
     const breakfastMenu = () => {
         return (
@@ -65,12 +66,6 @@ export const Orders = () => {
         );
     }
 
-    if (location.state !== null) {
-        const received = location.state.order;
-        console.log(received)
-    }
-
-
     return (
         <>
             <Header />
@@ -78,7 +73,7 @@ export const Orders = () => {
 
             <div className="table-input">
                 <label htmlFor="table-num" className="table-label">Table: </label>
-                <input type="number" id="tableNum" name="table-num" min="1" max="30" onChange={handleChangeTable}></input>
+                <input type="number" id="tableNum" name="table-num" min="1" max="30" onChange={handleChangeTable} value={table}></input>
             </div>
 
             <div className="menuButtons">
@@ -90,7 +85,7 @@ export const Orders = () => {
 
             <button className="verify-order-btn" onClick={() => {
 
-                const filtered = order.products.filter((product) => {
+                const filtered = orderProducts.filter((product) => {
                     return product.qty > 0 ;
                 });
 
@@ -98,8 +93,9 @@ export const Orders = () => {
                     navigate('/verify-order', {
                         state: {
                             order: {
-                                products: filtered,
-                                client: order.client
+                                menu: menu,
+                                products: orderProducts,
+                                client: table
                             }
                         }
                     })
