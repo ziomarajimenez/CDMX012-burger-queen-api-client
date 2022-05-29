@@ -33,7 +33,7 @@ export const LogIn = ({ signInWithEmail }) => {
         evt.preventDefault();
         signInWithEmail(values.email, values.password)
             .then((response) => {
-                console.log(response);
+                //console.log(response);
             })
             .catch((error) => {
                 setErrorCode(error.code);

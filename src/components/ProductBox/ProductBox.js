@@ -5,8 +5,8 @@ export const ProductBox = (props) => {
 
     let initialQuantity = 0;
 
-    for(let i = 0; i < props.orderProducts.length; i++){
-        if(props.product === props.orderProducts[i].product && props.orderProducts[i].qty > 0){
+    for (let i = 0; i < props.orderProducts.length; i++) {
+        if (props.product === props.orderProducts[i].product && props.orderProducts[i].qty > 0) {
             initialQuantity = props.orderProducts[i].qty;
         }
     }
@@ -14,8 +14,8 @@ export const ProductBox = (props) => {
     const [quantity, setQuantity] = useState(initialQuantity);
 
     const changeProductQuantity = (newQuantity) => {
-        for(let i = 0; i < props.orderProducts.length; i++){
-            if(props.product === props.orderProducts[i].product && newQuantity !== props.orderProducts[i].qty){
+        for (let i = 0; i < props.orderProducts.length; i++) {
+            if (props.product === props.orderProducts[i].product && newQuantity !== props.orderProducts[i].qty) {
                 props.orderProducts[i].qty = newQuantity;
             }
         }
@@ -23,7 +23,7 @@ export const ProductBox = (props) => {
 
     const increment = () => {
         const newQuantity = quantity + 1;
-        console.log(newQuantity);
+        //console.log(newQuantity);
         setQuantity(newQuantity);
         changeProductQuantity(newQuantity);
     }
