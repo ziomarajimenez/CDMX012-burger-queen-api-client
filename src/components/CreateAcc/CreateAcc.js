@@ -27,23 +27,39 @@ export const CreateAcc = ({ open, onClose }) => {
         setValues(newValues);
     }
 
+    const clearForm = () => {
+        const emptyValues = {
+            email: '',
+            password: '',
+            firstName: '',
+            lastName: '',
+            role: ''
+        }
+
+        setValues(emptyValues);
+    }
+
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        saveNewUser(values);
+        //saveNewUser(values);
+        clearForm()
     }
 
     return ReactDOM.createPortal(
         <>
             <div className='wrapper' />
             <div className='modal new-employee-modal'>
-                <button className="close-modal" onClick={onClose}> X </button>
+                <button className="close-modal" onClick={() => {
+                    onClose();
+                    clearForm();
+                }}> X </button>
 
                 <div className='new-employee-title'>
                     <img src={badge} alt="badge icon" className="badge-icon"></img>
                     <h1 className='new-employee-h1'>Register a new employee</h1>
                 </div>
                 
-                <form onSubmit={handleSubmit} className='create-acc-form'>
+                <form onSubmit={handleSubmit} className='create-acc-form' id='createAccForm'>
                     <label htmlFor='firstName'>First Name</label>
                     <input
                         type='text'
