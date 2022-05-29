@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './CreateAcc.css';
 import { saveNewUser } from '../../lib/firestore';
-import ReactDOM from "react-dom" 
+import ReactDOM from "react-dom";
+import badge from '../../assets/Badge.png';
 
-export const CreateAcc = ({open, onClose}) => {
+export const CreateAcc = ({ open, onClose }) => {
     const [values, setValues] = useState({
         email: '',
         password: '',
@@ -34,9 +35,14 @@ export const CreateAcc = ({open, onClose}) => {
     return ReactDOM.createPortal(
         <>
             <div className='wrapper' />
-            <div className='modal'>
+            <div className='modal new-employee-modal'>
                 <button className="close-modal" onClick={onClose}> X </button>
-                <h1>Create a new account</h1>
+
+                <div className='new-employee-title'>
+                    <img src={badge} alt="badge icon" className="badge-icon"></img>
+                    <h1 className='new-employee-h1'>Register a new employee</h1>
+                </div>
+                
                 <form onSubmit={handleSubmit} className='create-acc-form'>
                     <label htmlFor='firstName'>First Name</label>
                     <input
@@ -85,13 +91,11 @@ export const CreateAcc = ({open, onClose}) => {
                         <option value='admin'>Manager</option>
                     </select>
 
-                    <button type='submit'>Create Account</button>
+                    <button type='submit' className='new-employe-btn'>Add new employee</button>
 
                 </form>
             </div>
         </>,
         document.getElementById('portal')
     )
-
-
 }
