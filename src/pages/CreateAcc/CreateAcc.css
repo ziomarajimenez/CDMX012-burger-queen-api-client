@@ -1,0 +1,4 @@
+.create-acc-form{
+    display: flex;
+    flex-direction: column;
+}

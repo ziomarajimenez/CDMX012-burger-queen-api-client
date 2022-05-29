@@ -1,23 +1,18 @@
-import React from 'react';
+import { useState } from 'react';
 import { Header } from '../../components/Header/header';
 import { Footer } from '../../components/Footer/footer';
 import './CreateAcc.css';
 
 
-export const CreateAcc = ({createAccWithEmail}) => 
+export const CreateAcc = ({saveNewUser}) => 
 {
-    const [values, setValues] = React.useState({
+    const [values, setValues] = useState({
         email: '',
         password: '',
-        firstname: '',
-        lastname: '',
+        firstName: '',
+        lastName: '',
         role: ''
     });
-
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-        createAccWithEmail(values.email, values.password);
-    }
 
     const handleChange = (evt) => {
         const { target } = evt;
@@ -31,18 +26,28 @@ export const CreateAcc = ({createAccWithEmail}) =>
         setValues(newValues);
     }
 
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
+        saveNewUser(values);
+    }
+
+    /* if(accCreated === true){
+        saveNewUser(user, values);
+    } */
+
     return (
         <>
             <Header />
             <h1>Create a new account</h1>
-
-            <form onSubmit={handleSubmit}>
+            <p>Insert below the data of the new employee</p>
+            <form onSubmit={handleSubmit} className='create-acc-form'>
                 <label htmlFor='firstName'>First Name</label>
                 <input 
                     type='text' 
                     id='firstName' 
                     name='firstName' 
-                    value={values.firstname}
+                    placeholder='Jane' 
+                    value={values.firstName}
                     onChange={handleChange}>
                 </input>
 
@@ -51,7 +56,8 @@ export const CreateAcc = ({createAccWithEmail}) =>
                     type='text' 
                     id='lastName' 
                     name='lastName' 
-                    value={values.lastname}
+                    placeholder='Doe' 
+                    value={values.lastName}
                     onChange={handleChange}>
                 </input>
 
@@ -67,7 +73,7 @@ export const CreateAcc = ({createAccWithEmail}) =>
                     
                 <label htmlFor='password'>Password</label>
                 <input 
-                    type='text' 
+                    type='password' 
                     id='password' 
                     name='password' 
                     placeholder='mypassword123'
@@ -76,16 +82,13 @@ export const CreateAcc = ({createAccWithEmail}) =>
                 </input>
 
                 <label htmlFor='role'>Role</label>
-                <input 
-                    type='text' 
-                    id='role' 
-                    name='role' 
-                    placeholder='Waiter/Cook/Admin' 
-                    value={values.role}
-                    onChange={handleChange}>
-                </input>
+                    <select name='role' value={values.role} onChange={handleChange}>
+                        <option value='waiter' defaultValue>Waiter</option>
+                        <option value='cook'>Cook</option>
+                        <option value='admin'>Manager</option>
+                    </select>
 
-                <button type='submit'>Sign up</button>
+                <button type='submit'>Create Account</button>
 
             </form>
 
