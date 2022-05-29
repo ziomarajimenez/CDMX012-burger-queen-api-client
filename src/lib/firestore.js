@@ -1,9 +1,9 @@
 import { db } from "./firebaseConfig";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export async function saveNewUser(values) {
     try {
-        const docRef = await addDoc(collection(db, 'employees'), {
+        const docRef = await addDoc(collection(db, "employees"), {
             id: '', //user.uid,
             email: values.email,
             password: values.password,
@@ -15,4 +15,11 @@ export async function saveNewUser(values) {
     } catch (e) {
         console.error("Error adding document: ", e);
     }
+}
+
+export async function getEmployees() {
+    const querySnapshot = await getDocs(collection(db, "employees"));
+    return querySnapshot.docs.map((doc) => {
+        return doc.data()
+      })
 }
