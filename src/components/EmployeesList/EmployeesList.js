@@ -23,16 +23,16 @@ export const EmployeesList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* workers.map(person => {
+                    { workers.map(person => {
                         return(
-                            <tr /* key={person.id} >
+                            <tr key={person.id} >
                                 <td>{person.firstName}</td>
                                 <td>{person.lastName}</td>
                                 <td>{person.email}</td>
                                 <td>{person.role}</td>
                             </tr>
-                        )})
-                    */}
+                        )
+                    })}
                 </tbody>
                 
             </table>
