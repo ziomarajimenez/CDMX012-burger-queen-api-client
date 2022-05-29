@@ -14,12 +14,6 @@ export const TableBox = ({ tableObject }) => {
         classStatus = "btn-table ready"
     }
 
-    // if (tableObject.status === 'ready') {
-    //     classStatus = "btn-table ready"
-    // } else {
-    //     classStatus = "btn-table"
-    // }
-
     const [isOpen, setIsOpen] = useState(false);
 
     return (
