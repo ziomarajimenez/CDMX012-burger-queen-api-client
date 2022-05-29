@@ -5,12 +5,15 @@ import { useState, useEffect } from "react";
 import './VerifyOrder.css';
 import arrow from '../../assets/flecha-izquierda.png';
 import { currentUser } from "../../lib/firebaseAuth";
+import { SentModal } from '../../components/SentModal/SentModal'
 
 export const VerifyOrder = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const order = location.state.order;
 
+
+    const [ isOpenModal, setIsOpenModal ] = useState(false)
 
     const modifyOrder = () => {
         navigate('/orders', {
@@ -19,6 +22,10 @@ export const VerifyOrder = () => {
             }
         });
     }
+
+    const filtered = order.products.filter((product) => {
+        return product.qty > 0 ;
+    });
 
     const [total, setTotal] = useState('0')
 
@@ -50,7 +57,7 @@ export const VerifyOrder = () => {
                 id: lastOrder.id + 1,
                 userId: currentUser().uid,
                 table: order.client,
-                products: order.products,
+                products: filtered,
                 status: "sent",
                 dateEntry: new Date().getTime(),
                 dateProcessed: ""
@@ -58,7 +65,8 @@ export const VerifyOrder = () => {
         };
         fetch('http://localhost:3333/orders', requestOptions)
             .then(response => response.json())
-            .then(() => navigate('/'))
+            .then(() => setIsOpenModal(true))
+            /* .then(() => navigate('/')) */
             .catch(res => console.log(res))
     }
 
@@ -76,7 +84,7 @@ export const VerifyOrder = () => {
 
             <section className="order-summary">
                 <div className="summary-grid">
-                    {order.products.map((product, index) => {
+                    {filtered.map((product, index) => {
                         return <div key={index} className="product-in-list">
                             <span className="qty"> ( {product.qty} ) </span>
                             <span className="prod-name"> {product.product} </span>
@@ -88,7 +96,10 @@ export const VerifyOrder = () => {
                 <p className="order-total"><span className="total">Total:</span> ${total}</p>
                 <button className="send-kitchen" onClick={() => saveOrder(order)}>Send to the kitchen</button>
             </section>
-
+            <SentModal open={isOpenModal} onClose={() => {
+                setIsOpenModal(false);
+                navigate('/');
+                }}/>
             <Footer />
         </div>
     )
