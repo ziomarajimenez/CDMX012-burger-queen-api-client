@@ -41,17 +41,19 @@ export const CreateAcc = ({ open, onClose }) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        //saveNewUser(values);
-        clearForm()
+        saveNewUser(values);
+        clearForm();
+        onClose();
     }
+
 
     return ReactDOM.createPortal(
         <>
             <div className='wrapper' />
             <div className='modal new-employee-modal'>
                 <button className="close-modal" onClick={() => {
-                    onClose();
                     clearForm();
+                    onClose();
                 }}> X </button>
 
                 <div className='new-employee-title'>
@@ -102,9 +104,9 @@ export const CreateAcc = ({ open, onClose }) => {
 
                     <label htmlFor='role'>Role</label>
                     <select name='role' value={values.role} onChange={handleChange}>
-                        <option value='waiter' defaultValue>Waiter</option>
-                        <option value='cook'>Cook</option>
-                        <option value='admin'>Manager</option>
+                        <option value='Waiter'>Waiter</option>
+                        <option value='Cook'>Cook</option>
+                        <option value='Manager'>Manager</option>
                     </select>
 
                     <button type='submit' className='new-employe-btn'>Add new employee</button>
