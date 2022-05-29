@@ -6,11 +6,19 @@ import { useState } from 'react';
 export const TableBox = ({ tableObject }) => {
     let classStatus = ''
 
-    if (tableObject.status === 'ready') {
-        classStatus = "btn-table ready"
-    } else {
+    const [isActive, setIsActive] = useState(false);
+
+    if (tableObject.status !== 'ready' || isActive) {
         classStatus = "btn-table"
+    } else {
+        classStatus = "btn-table ready"
     }
+
+    // if (tableObject.status === 'ready') {
+    //     classStatus = "btn-table ready"
+    // } else {
+    //     classStatus = "btn-table"
+    // }
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +28,7 @@ export const TableBox = ({ tableObject }) => {
                 Table: {tableObject.table}
                 <img src={tableImg} alt="img-table" id="imgTable" />
             </button>
-            <DeliveredModal open={isOpen} onClose={() => setIsOpen(false)} id={tableObject.id} >
+            <DeliveredModal open={isOpen} onClose={() => setIsOpen(false)} id={tableObject.id} accept={() => setIsActive(true)} >
             </DeliveredModal>
         </>
 

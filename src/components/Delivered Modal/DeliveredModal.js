@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom';
 import './DeliveredModal.css';
 // import { useState, useEffect } from 'react';
 
-const DeliveredModal = ({ open, onClose, id }) => {
-    // const [isActive, setIsActive] = useState(true);
-
-    // useEffect(() => {
-
-    // }, [isActive])
+const DeliveredModal = ({ open, onClose, id, accept }) => {
 
     if (!open) return null;
 
@@ -26,6 +21,7 @@ const DeliveredModal = ({ open, onClose, id }) => {
         fetch(idOrder, requestOptions)
             .then(response => response.json())
             .then(onClose)
+            .then(accept)
             .catch(res => console.log(res))
     }
 

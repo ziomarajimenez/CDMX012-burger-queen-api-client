@@ -141,7 +141,7 @@
           "price": 7
         }
       ],
-      "status": "ready",
+      "status": "delivered",
       "dateEntry": 1653332048928,
       "dateProcessed": ""
     },
@@ -166,7 +166,7 @@
           "qty": 1
         }
       ],
-      "status": "sent",
+      "status": "delivered",
       "dateEntry": 1653438349795,
       "dateProcessed": ""
     },
