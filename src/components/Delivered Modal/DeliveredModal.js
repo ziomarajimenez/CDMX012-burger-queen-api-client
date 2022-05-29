@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './DeliveredModal.css';
-// import { useState, useEffect } from 'react';
 
 const DeliveredModal = ({ open, onClose, id, accept }) => {
 
