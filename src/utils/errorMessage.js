@@ -20,3 +20,19 @@ export const LoginError = ({errorMsg}) => {
         </>
     )
 };
+
+export const createAccError = (errorMsg) => {
+    let txt = '';
+    
+    if (errorMsg === 'auth/email-already-in-use') {
+        txt = 'This email has already been registered, please try another one.' 
+    } else if (errorMsg === 'auth/invalid-email') {
+        txt = 'Invalid e-mail address, please try another one.'; 
+    } else if (errorMsg === 'auth/weak-password') {
+        txt = 'Weak password. Try with using letters, numbers and symbols.'; 
+    } else {
+        txt = 'An error has occurred, please try again.'; 
+    }
+
+    return txt;
+};

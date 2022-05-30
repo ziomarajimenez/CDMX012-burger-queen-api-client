@@ -2,20 +2,13 @@ import {
     createUserWithEmailAndPassword,
     getAuth,
     signOut,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    updateCurrentUser
 } from "firebase/auth";
 import { auth } from './firebaseConfig';
 
 export const createAccWithEmail = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password);
-        /* .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
-        })
-        .catch((error) => {
-            console.log(error)
-        }); */
 }
 
 export const signInWithEmail = async (email, password) => {
@@ -38,4 +31,8 @@ export const currentUser = () => {
     if (user) {
         return user;
     }
+}
+
+export const updateUser = async (originalUser) => {
+    await updateCurrentUser(auth, originalUser);
 }

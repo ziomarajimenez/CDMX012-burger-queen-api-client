@@ -40,13 +40,13 @@
     color: var(--darker-gray);
     padding-left: 0.7em;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .new-employe-btn{
     align-self: center;
-    border: 1px solid var(--darker-gray);
+    /* border: 1px solid var(--darker-gray);
     background-color: var(--light-gray);
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7); */
     font-weight: bolder;
 }

@@ -4,12 +4,13 @@ import './EmployeesList.css';
 
 export const EmployeesList = () => {
     const [ employees, setEmployees ] = useState();
+
     
     /* useEffect(()=>{
         getEmployees()
         .then(list => setWorkers(list));
     }, []) */
-
+  
     useEffect(() => {
         fetch('http://localhost:3333/users')
             .then((response) => {
