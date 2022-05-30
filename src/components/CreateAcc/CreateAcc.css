@@ -1,0 +1,52 @@
+.new-employee-modal{
+    width: 50%;
+}
+
+.new-employee-title{
+    display: flex;
+    align-items: center;
+}
+
+.new-employee-h1{
+    font-size: 1.5em;
+}
+
+.badge-icon{
+    height: 35px;
+    margin-right: 1em;
+}
+
+.create-acc-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.create-acc-form label{
+    color: var(--darker-gray);
+    font-weight: bold;
+    margin: 0.75em 0;
+}
+
+.create-acc-form input {
+    border: 1px solid var(--darker-gray);
+    width: 97%;
+}
+
+.create-acc-form select{
+    height: 2.2em;
+    border-radius: 0.7em;
+    font-family: 'Poppins', sans-serif;
+    color: var(--darker-gray);
+    padding-left: 0.7em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.new-employe-btn{
+    align-self: center;
+    border: 1px solid var(--darker-gray);
+    background-color: var(--light-gray);
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bolder;
+}
