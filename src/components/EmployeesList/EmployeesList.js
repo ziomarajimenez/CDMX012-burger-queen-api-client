@@ -1,14 +1,14 @@
-import { getEmployees } from "../../lib/firestore";
-import { useEffect, useState } from "react";
+/* import { getEmployees } from "../../lib/firestore";
+import { useEffect, useState } from "react"; */
 import './EmployeesList.css';
 
 export const EmployeesList = () => {
-    const [ workers, setWorkers ] = useState();
+    /* const [ workers, setWorkers ] = useState();
     
     useEffect(()=>{
         getEmployees()
         .then(list => setWorkers(list));
-    }, [])
+    }, []) */
 
     //console.log(workers)
 

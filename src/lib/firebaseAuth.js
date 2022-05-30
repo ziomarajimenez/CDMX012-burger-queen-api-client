@@ -2,7 +2,8 @@ import {
     createUserWithEmailAndPassword,
     getAuth,
     signOut,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    updateCurrentUser
 } from "firebase/auth";
 import { auth } from './firebaseConfig';
 
@@ -38,4 +39,8 @@ export const currentUser = () => {
     if (user) {
         return user;
     }
+}
+
+export const updateUser = async (originalUser) => {
+    await updateCurrentUser(auth, originalUser);
 }

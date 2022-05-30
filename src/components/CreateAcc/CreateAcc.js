@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './CreateAcc.css';
-import { saveNewUser } from '../../lib/firestore';
+//import { saveNewUser } from '../../lib/firestore';
+import { createAccWithEmail, currentUser, updateUser } from '../../lib/firebaseAuth';
 import ReactDOM from "react-dom";
 import badge from '../../assets/Badge.png';
 
@@ -39,9 +40,19 @@ export const CreateAcc = ({ open, onClose }) => {
         setValues(emptyValues);
     }
 
-    const handleSubmit = (evt) => {
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
-        saveNewUser(values);
+        const originalUser = currentUser(); // current user, user that originally loged in
+        console.log(originalUser)
+        
+        createAccWithEmail(values.email, values.password)
+        .then(()=>{
+            const newUser = currentUser();
+            const { uid } = newUser; // gets new user uid
+            console.log(uid)
+            updateUser(originalUser); //gets back to the original user
+        })
+        
         clearForm();
         onClose();
     }
