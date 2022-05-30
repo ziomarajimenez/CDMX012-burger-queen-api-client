@@ -105,7 +105,7 @@ export const CreateAcc = ({ open, onClose }) => {
                     <label htmlFor='role'>Role</label>
                     <select name='role' value={values.role} onChange={handleChange}>
                         <option value='Waiter'>Waiter</option>
-                        <option value='Cook'>Cook</option>
+                        <option value='Chef'>Chef</option>
                         <option value='Manager'>Manager</option>
                     </select>
 

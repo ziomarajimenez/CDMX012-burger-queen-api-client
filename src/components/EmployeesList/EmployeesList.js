@@ -1,5 +1,6 @@
 import { getEmployees } from "../../lib/firestore";
 import { useEffect, useState } from "react";
+import './EmployeesList.css';
 
 export const EmployeesList = () => {
     const [ workers, setWorkers ] = useState();
@@ -20,9 +21,76 @@ export const EmployeesList = () => {
                         <th>Last name</th>
                         <th>E-mail</th>
                         <th>Role</th>
+                        <th>Opt</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Ziomita</td>
+                        <td>Jimenez</td>
+                        <td>zioma@gmail.com</td>
+                        <td>Chef</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Perla</td>
+                        <td>Del Ángel</td>
+                        <td>perladelangel@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela</td>
+                        <td>Huitrón</td>
+                        <td>isa@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
                     {/* { workers.map(person => {
                         return(
                             <tr key={person.id} >

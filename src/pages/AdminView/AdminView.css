@@ -1,6 +1,6 @@
 .top-buttons{
     display: flex;
-    width: 75%;
+    width: 80%;
     justify-content: space-between;
     margin-bottom: 1.5em;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .table-section{
-    background-color: var(--light-gray);
     height: 55%;
-    width: 75%;
+    width: 80%;
+    overflow-y: auto;
 }
