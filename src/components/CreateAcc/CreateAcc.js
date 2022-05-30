@@ -10,13 +10,15 @@ export const CreateAcc = ({ open, onClose }) => {
     const [ password, setPassword ] = useState('');
     const [ passwordConf, setPasswordConf ] = useState('');
 
-    const [values, setValues] = useState({
+    const emptyValues = {
         email: '',
         password: '',
         firstName: '',
         lastName: '',
         role: ''
-    });
+    }
+
+    const [values, setValues] = useState(emptyValues);
 
     if (!open) return null;
 
@@ -30,18 +32,6 @@ export const CreateAcc = ({ open, onClose }) => {
         };
 
         setValues(newValues);
-    }
-
-    const clearForm = () => {
-        const emptyValues = {
-            email: '',
-            password: '',
-            firstName: '',
-            lastName: '',
-            role: ''
-        }
-
-        setValues(emptyValues);
     }
 
     const handleSubmit = async (evt) => {
@@ -64,7 +54,8 @@ export const CreateAcc = ({ open, onClose }) => {
 
                 //HERE we would need to save the data ----------------- (probably)
 
-                clearForm();
+                //clearForm();
+                setValues(emptyValues);
                 onClose();
             }) 
             .catch(error =>{ //handle erros in the createacc process
@@ -81,7 +72,7 @@ export const CreateAcc = ({ open, onClose }) => {
             <div className='wrapper' />
             <div className='modal new-employee-modal'>
                 <button className="close-modal" onClick={() => {
-                    clearForm();
+                    setValues(emptyValues);
                     onClose();
                 }}> X </button>
 

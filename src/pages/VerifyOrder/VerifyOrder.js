@@ -12,9 +12,8 @@ export const VerifyOrder = () => {
     const location = useLocation();
     const order = location.state.order;
 
-    //console.log(order);
-    const [ isOpenModal, setIsOpenModal ] = useState(false)
 
+    const [ isOpenModal, setIsOpenModal ] = useState(false)
 
     const modifyOrder = () => {
         navigate('/orders', {
@@ -49,7 +48,6 @@ export const VerifyOrder = () => {
             })
     }, []);
 
-    //console.log(lastOrder);
 
     const saveOrder = (order) => {
         const requestOptions = {

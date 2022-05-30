@@ -1,16 +1,27 @@
-/* import { getEmployees } from "../../lib/firestore";
-import { useEffect, useState } from "react"; */
+/* import { getEmployees } from "../../lib/firestore"; */
+import { useEffect, useState } from "react";
 import './EmployeesList.css';
 
 export const EmployeesList = () => {
-    /* const [ workers, setWorkers ] = useState();
+    const [ employees, setEmployees ] = useState();
+
     
-    useEffect(()=>{
+    /* useEffect(()=>{
         getEmployees()
         .then(list => setWorkers(list));
     }, []) */
+  
+    useEffect(() => {
+        fetch('http://localhost:3333/users')
+            .then((response) => {
+                return response.json()
+            })
+            .then((employees) => {
+                setEmployees(employees)
+            })
+    }, [])
 
-    //console.log(workers)
+    console.log(employees)
 
     return (
         <div className="table-wrapper">
@@ -25,35 +36,17 @@ export const EmployeesList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Zioma</td>
-                        <td>Jimenez</td>
-                        <td>zioma@gmail.com</td>
-                        <td>Chef</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Perla</td>
-                        <td>Del Ángel</td>
-                        <td>perladelangel@gmail.com</td>
-                        <td>Waitress</td>
-                    </tr>
-                   
-                    {/* { workers.map(person => {
-                        return(
-                            <tr key={person.id} >
-                                <td>{person.firstName}</td>
-                                <td>{person.lastName}</td>
-                                <td>{person.email}</td>
-                                <td>{person.role}</td>
-                            </tr>
-                        )
-                    })} */}
+                    {employees.map(employee => {
+                        return (
+                        <tr key={employee.id}>
+                            <td>{employee.name}</td>
+                            <td>{employee.lastName}</td>
+                            <td>{employee.email}</td>
+                            <td>{employee.roles}</td>
+                        </tr>
+                        );
+                    })}
+
                 </tbody>
                 
             </table>
