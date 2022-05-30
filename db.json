@@ -239,6 +239,36 @@
       "status": "delivered",
       "dateEntry": 1653679607849,
       "dateProcessed": ""
+    },
+    {
+      "id": 7,
+      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
+      "table": "67",
+      "products": [
+        {
+          "product": "Water 500 ml",
+          "price": 5,
+          "qty": 3
+        },
+        {
+          "product": "Basic burger",
+          "price": 10,
+          "qty": 4
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1653924417631,
+      "dateProcessed": ""
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Ziomara",
+      "lastName": "Jimenez",
+      "email": "zioma@gmail.com",
+      "roles": "Chef",
+      "admin": false
     }
   ]
 }

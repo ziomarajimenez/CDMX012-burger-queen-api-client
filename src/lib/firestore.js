@@ -1,4 +1,4 @@
-import { db } from "./firebaseConfig";
+/* import { db } from "./firebaseConfig";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export async function saveNewUser(values) {
@@ -22,4 +22,4 @@ export async function getEmployees() {
     return querySnapshot.docs.map((doc) => {
         return doc.data()
       })
-}
+} */
