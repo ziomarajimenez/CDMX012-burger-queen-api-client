@@ -14,8 +14,11 @@ table td + td {
 } 
 
 table th + th {
-    border-left: 1px solid var(--darker-gray); 
-    
+    border-left: 1px solid var(--darker-gray);     
+}
+
+th {
+    border-bottom: 1px solid var(--darker-gray); 
 }
 
 tr { 

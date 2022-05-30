@@ -26,7 +26,7 @@ export const EmployeesList = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Ziomita</td>
+                        <td>Zioma</td>
                         <td>Jimenez</td>
                         <td>zioma@gmail.com</td>
                         <td>Chef</td>
@@ -38,59 +38,12 @@ export const EmployeesList = () => {
                         <td>Manager</td>
                     </tr>
                     <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
                         <td>Perla</td>
                         <td>Del Ángel</td>
                         <td>perladelangel@gmail.com</td>
-                        <td>Manager</td>
+                        <td>Waitress</td>
                     </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
-                    <tr>
-                        <td>Isabela</td>
-                        <td>Huitrón</td>
-                        <td>isa@gmail.com</td>
-                        <td>Manager</td>
-                    </tr>
+                   
                     {/* { workers.map(person => {
                         return(
                             <tr key={person.id} >
