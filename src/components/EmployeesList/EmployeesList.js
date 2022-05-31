@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import './EmployeesList.css';
 
 export const EmployeesList = () => {
-    const [ employees, setEmployees ] = useState();
-  
+    const [employees, setEmployees] = useState();
+
     useEffect(() => {
         fetch('http://localhost:3333/users')
             .then((response) => {
@@ -30,19 +30,19 @@ export const EmployeesList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {/*employees.map(employee => {
+                    {employees?.map(employee => {
                         return (
-                        <tr key={employee.id}>
-                            <td>{employee.name}</td>
-                            <td>{employee.lastName}</td>
-                            <td>{employee.email}</td>
-                            <td>{employee.roles}</td>
-                        </tr>
+                            <tr key={employee.id}>
+                                <td>{employee.name}</td>
+                                <td>{employee.lastName}</td>
+                                <td>{employee.email}</td>
+                                <td>{employee.roles}</td>
+                            </tr>
                         );
-                    })*/}
-
+                    })
+                    }
                 </tbody>
-                
+
             </table>
         </div>
     )
