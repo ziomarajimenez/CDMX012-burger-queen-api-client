@@ -279,7 +279,7 @@
       "admin": false
     },
     {
-      "id": "R193K2JJ4yT2F5tCGkZuiFYbwEl2",
+      "id": "HF0peJOipHgxDbwrCaw8fyW8C383",
       "name": "Perla",
       "lastName": "Del Angel",
       "email": "perla@gmail.com",
@@ -287,19 +287,27 @@
       "admin": false
     },
     {
-      "id": "wnWQwGwzDadnIBR32B9Vg04kMTF2",
-      "name": "Julia",
-      "lastName": "Juarez",
-      "email": "julia@gmail.com",
-      "roles": "Chef",
-      "admin": false
-    },
-    {
-      "id": "k0LCBVtaqEfpWRD2mqfD6E5Pq6S2",
+      "id": "GxSkWgkQOoNvAb3emzRHiyGvfDs2",
       "name": "Daniela",
       "lastName": "Díaz",
       "email": "dani@gmail.com",
       "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "xwIUGYVfITTXJ0UHxdgqVRqZRBm1",
+      "name": "Maria",
+      "lastName": "Martintes",
+      "email": "maria@gmail.com",
+      "roles": "Manager",
+      "admin": true
+    },
+    {
+      "id": "inTe8NIERNfzIy6xbgxpeoHpCBG3",
+      "name": "Mariana",
+      "lastName": "Mar",
+      "email": "mariana@gmail.com",
+      "roles": "Waiter",
       "admin": false
     }
   ]
