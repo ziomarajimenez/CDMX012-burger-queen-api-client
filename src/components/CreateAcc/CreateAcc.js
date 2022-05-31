@@ -7,15 +7,15 @@ import badge from '../../assets/Badge.png';
 import { createAccError } from '../../utils/errorMessage';
 
 export const CreateAcc = ({ open, onClose }) => {
-    const [ password, setPassword ] = useState('');
-    const [ passwordConf, setPasswordConf ] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConf, setPasswordConf] = useState('');
 
     const emptyValues = {
         email: '',
         password: '',
         firstName: '',
         lastName: '',
-        role: ''
+        role: 'Waiter'
     }
 
     const [values, setValues] = useState(emptyValues);
@@ -56,30 +56,30 @@ export const CreateAcc = ({ open, onClose }) => {
         evt.preventDefault();
         const errorArea = document.getElementById('errorArea');
 
-        if(password === passwordConf){
+        if (password === passwordConf) {
             values.password = password; //setting the matched passwords as value
 
             const originalUser = currentUser(); // current user, user that originally loged in
-            
+
             createAccWithEmail(values.email, values.password)
-            .then(()=>{
-                errorArea.innerText = '';
+                .then(() => {
+                    errorArea.innerText = '';
 
-                const newUser = currentUser();
-                const { uid } = newUser; // gets new user uid
-                //console.log(uid)
-                updateUser(originalUser); //gets back to the original user
+                    const newUser = currentUser();
+                    const { uid } = newUser; // gets new user uid
+                    //console.log(uid)
+                    updateUser(originalUser); //gets back to the original user
 
-                //HERE we would need to save the data -----------------
-                saveNewEmployee(values,uid);
+                    //HERE we would need to save the data -----------------
+                    saveNewEmployee(values, uid);
 
-                setValues(emptyValues); //clears the form
-                onClose(); //closes the modal window
-            }) 
-            .catch(error =>{ //handle erros in the createacc process
-                errorArea.innerText = createAccError(error.code);
-            });
-        }  else { //handle when passwords don't match
+                    setValues(emptyValues); //clears the form
+                    onClose(); //closes the modal window
+                })
+                .catch(error => { //handle erros in the createacc process
+                    errorArea.innerText = createAccError(error.code);
+                });
+        } else { //handle when passwords don't match
             errorArea.innerText = 'Passwords do not match, please try again.';
         }
     }
@@ -98,7 +98,7 @@ export const CreateAcc = ({ open, onClose }) => {
                     <img src={badge} alt="badge icon" className="badge-icon"></img>
                     <h1 className='new-employee-h1'>Register a new employee</h1>
                 </div>
-                
+
                 <form onSubmit={handleSubmit} className='create-acc-form' id='createAccForm'>
                     <label htmlFor='firstName'>First Name</label>
                     <input
@@ -155,8 +155,8 @@ export const CreateAcc = ({ open, onClose }) => {
                         <option value='Manager'>Manager</option>
                     </select>
 
-                    <span id='errorArea' className='error-msg'/>
-                
+                    <span id='errorArea' className='error-msg' />
+
                     <button type='submit' className='new-employe-btn'>Add new employee</button>
 
                 </form>

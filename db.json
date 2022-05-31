@@ -277,6 +277,14 @@
       "email": "jane@gmail.com",
       "roles": "Chef",
       "admin": false
+    },
+    {
+      "id": "GJbiv3NCkXXb7ZNGCjqXvIx5uuz2",
+      "name": "Bob",
+      "lastName": "Esponja",
+      "email": "bobesponja@gmail.com",
+      "roles": "Waiter",
+      "admin": false
     }
   ]
 }
