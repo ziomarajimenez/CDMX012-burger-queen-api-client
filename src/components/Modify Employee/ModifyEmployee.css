@@ -1,0 +1,16 @@
+#modifyOption:focus option:first-of-type {
+    display: none;
+}
+#modifyOption {
+    width: 21px;
+    border-radius: 2px;
+    border-color: #F44341;
+    color: #F44341;
+}
+
+option{
+    color: #817C7C;
+    border-radius: 3px;
+    font-family: Poppins;
+    font-weight: 600;
+}

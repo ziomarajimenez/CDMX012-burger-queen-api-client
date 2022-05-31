@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './EmployeesList.css';
+import { ModifyEmployee } from "../Modify Employee/ModifyEmployee";
 
 export const EmployeesList = () => {
     const [employees, setEmployees] = useState();
@@ -37,6 +38,7 @@ export const EmployeesList = () => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
+                                <td> <ModifyEmployee> </ModifyEmployee></td>
                             </tr>
                         );
                     })
