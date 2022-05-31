@@ -34,6 +34,24 @@ export const CreateAcc = ({ open, onClose }) => {
         setValues(newValues);
     }
 
+    const saveNewEmployee = (values, uid) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                id: uid,
+                name: values.firstName,
+                lastName: values.lastName,
+                email: values.email,
+                roles: values.role,
+                admin: values.role === 'Manager' ? true : false
+            })
+        };
+        fetch('http://localhost:3333/users', requestOptions)
+            .then(response => response.json())
+            .catch(res => console.log(res))
+    }
+
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         const errorArea = document.getElementById('errorArea');
@@ -49,14 +67,14 @@ export const CreateAcc = ({ open, onClose }) => {
 
                 const newUser = currentUser();
                 const { uid } = newUser; // gets new user uid
-                console.log(uid)
+                //console.log(uid)
                 updateUser(originalUser); //gets back to the original user
 
-                //HERE we would need to save the data ----------------- (probably)
+                //HERE we would need to save the data -----------------
+                saveNewEmployee(values,uid);
 
-                //clearForm();
-                setValues(emptyValues);
-                onClose();
+                setValues(emptyValues); //clears the form
+                onClose(); //closes the modal window
             }) 
             .catch(error =>{ //handle erros in the createacc process
                 errorArea.innerText = createAccError(error.code);
