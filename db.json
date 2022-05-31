@@ -309,6 +309,14 @@
       "email": "mariana@gmail.com",
       "roles": "Waiter",
       "admin": false
+    },
+    {
+      "id": "EEthW08xErN6aBn3KCocoGbwc833",
+      "name": "Julian",
+      "lastName": "Julio",
+      "email": "julian@gmail.com",
+      "roles": "Chef",
+      "admin": false
     }
   ]
 }

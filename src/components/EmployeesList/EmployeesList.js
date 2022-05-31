@@ -1,20 +1,6 @@
 import './EmployeesList.css';
-import { useEffect, useState } from 'react';
+import { ModifyEmployee } from "../Modify Employee/ModifyEmployee";
 export const EmployeesList = (props) => {
-    const [employees, setEmployees] = useState();
-
-    useEffect(() => {
-        fetch('http://localhost:3333/users')
-            .then((response) => {
-                return response.json()
-            })
-            .then((employees) => {
-                setEmployees(employees);
-                console.log(employees)
-            })
-    }, [])
-
-    //console.log(employees)
 
     return (
         <div className="table-wrapper">
@@ -36,6 +22,7 @@ export const EmployeesList = (props) => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
+                                <td> <ModifyEmployee> </ModifyEmployee></td>
                             </tr>
                         );
                     })}
