@@ -1,21 +1,7 @@
 import { useEffect, useState } from "react";
 import './EmployeesList.css';
 
-export const EmployeesList = () => {
-    const [ employees, setEmployees ] = useState();
-  
-    useEffect(() => {
-        fetch('http://localhost:3333/users')
-            .then((response) => {
-                return response.json()
-            })
-            .then((employees) => {
-                setEmployees(employees);
-                console.log(employees)
-            })
-    }, [])
-
-    //console.log(employees)
+export const EmployeesList = (props) => {
 
     return (
         <div className="table-wrapper">
@@ -30,7 +16,7 @@ export const EmployeesList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {/*employees.map(employee => {
+                    {props.employees?.map(employee => {
                         return (
                         <tr key={employee.id}>
                             <td>{employee.name}</td>
@@ -39,7 +25,7 @@ export const EmployeesList = () => {
                             <td>{employee.roles}</td>
                         </tr>
                         );
-                    })*/}
+                    })}
 
                 </tbody>
                 

@@ -277,6 +277,54 @@
       "email": "jane@gmail.com",
       "roles": "Chef",
       "admin": false
+    },
+    {
+      "id": "fxn5zDKSkVfQ4UVqXisoQ8y5Enk2",
+      "name": "Isabela",
+      "lastName": "H.",
+      "email": "ma.isahr@gmail.com",
+      "roles": "",
+      "admin": false
+    },
+    {
+      "id": "gfMlJ7eAZNX3EhX9fCr9RKdln6T2",
+      "name": "Perla",
+      "lastName": "Perlas",
+      "email": "perla@gmail.com",
+      "roles": "Manager",
+      "admin": true
+    },
+    {
+      "id": "nZHuripubiTtXCj5yegt6H3GbMz1",
+      "name": "Dani",
+      "lastName": "G.",
+      "email": "dani@gmail.com",
+      "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "cLCPTdaU4wdWap5g119VPX1CRKA2",
+      "name": "Sofia",
+      "lastName": "M.s",
+      "email": "sofia@gmail.com",
+      "roles": "",
+      "admin": false
+    },
+    {
+      "id": "2RczqBgKYQTMDC4zF5D6wOCwmzc2",
+      "name": "Valeria",
+      "lastName": "V.",
+      "email": "valeria@gmail.com",
+      "roles": "",
+      "admin": false
+    },
+    {
+      "id": "ndzOkYzCfAZS7gnPdQ2SeVNxzLC3",
+      "name": "Mariana",
+      "lastName": "L.",
+      "email": "mariana@gmail.com",
+      "roles": "",
+      "admin": false
     }
   ]
 }
