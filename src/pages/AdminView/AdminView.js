@@ -10,6 +10,7 @@ export const AdminView = () => {
     const [ view, setView ] = useState('employees');
     const [ isOpen, setIsOpen ] = useState(false);
     const [ employees, setEmployees ] = useState();
+    const [ updateEmployees, setUpdate ] = useState(0);
   
     useEffect(() => {
         fetch('http://localhost:3333/users')
@@ -20,8 +21,11 @@ export const AdminView = () => {
                 setEmployees(employees);
                 console.log(employees)
             })
-    }, [isOpen])
+    }, [updateEmployees])
 
+    const handleUpdate = (updateEmployees) => {
+        setUpdate(updateEmployees + 1);
+    }
 
     return (
         <>
@@ -39,7 +43,7 @@ export const AdminView = () => {
                 {view === 'employees' ? <EmployeesList employees={employees} /> : <ProductList /> }
             </section>
 
-            <CreateAcc open={isOpen} onClose={() => setIsOpen(false)} />
+            <CreateAcc open={isOpen} handleUpdate={handleUpdate} updateEmployees={updateEmployees} onClose={() => setIsOpen(false)} />
             <Footer />
         </>
     )

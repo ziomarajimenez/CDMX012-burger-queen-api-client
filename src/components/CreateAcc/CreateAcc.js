@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import badge from '../../assets/Badge.png';
 import { createAccError } from '../../utils/errorMessage';
 
-export const CreateAcc = ({ open, onClose }) => {
+export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
     const [ password, setPassword ] = useState('');
     const [ passwordConf, setPasswordConf ] = useState('');
 
@@ -72,6 +72,7 @@ export const CreateAcc = ({ open, onClose }) => {
 
                 //HERE we would need to save the data -----------------
                 saveNewEmployee(values,uid);
+                handleUpdate(updateEmployees);
 
                 setValues(emptyValues); //clears the form
                 onClose(); //closes the modal window

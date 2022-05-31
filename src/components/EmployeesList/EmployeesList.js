@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import './EmployeesList.css';
 
 export const EmployeesList = (props) => {
