@@ -263,26 +263,50 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "kwsuDaEqSJcvyDOCEbGE3cPPgZk2",
       "name": "Ziomara",
       "lastName": "Jimenez",
-      "email": "zioma@gmail.com",
+      "email": "ziomara@gmail.com",
       "roles": "Chef",
       "admin": false
     },
     {
-      "id": "rCvptZKe7iQZ1aGK63mwBiGkg733",
-      "name": "Jane",
-      "lastName": "Doe",
-      "email": "jane@gmail.com",
+      "id": "rnUB6Jr8OQUpf9p9B3V6bC7XuXk2",
+      "name": "Isabela",
+      "lastName": "H.",
+      "email": "isabela@gmail.com",
       "roles": "Chef",
       "admin": false
     },
     {
-      "id": "GJbiv3NCkXXb7ZNGCjqXvIx5uuz2",
-      "name": "Bob",
-      "lastName": "Esponja",
-      "email": "bobesponja@gmail.com",
+      "id": "HF0peJOipHgxDbwrCaw8fyW8C383",
+      "name": "Perla",
+      "lastName": "Del Angel",
+      "email": "perla@gmail.com",
+      "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "GxSkWgkQOoNvAb3emzRHiyGvfDs2",
+      "name": "Daniela",
+      "lastName": "Díaz",
+      "email": "dani@gmail.com",
+      "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "xwIUGYVfITTXJ0UHxdgqVRqZRBm1",
+      "name": "Maria",
+      "lastName": "Martintes",
+      "email": "maria@gmail.com",
+      "roles": "Manager",
+      "admin": true
+    },
+    {
+      "id": "inTe8NIERNfzIy6xbgxpeoHpCBG3",
+      "name": "Mariana",
+      "lastName": "Mar",
+      "email": "mariana@gmail.com",
       "roles": "Waiter",
       "admin": false
     }

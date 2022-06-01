@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header/header";
 import { Footer } from "../../components/Footer/footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CreateAcc } from "../../components/CreateAcc/CreateAcc";
 import { EmployeesList } from "../../components/EmployeesList/EmployeesList";
 import { ProductList } from "../../components/ProductList/ProductList";
@@ -9,6 +9,23 @@ import './AdminView.css';
 export const AdminView = () => {
     const [ view, setView ] = useState('employees');
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ employees, setEmployees ] = useState();
+    const [ updateEmployees, setUpdate ] = useState(0);
+  
+    useEffect(() => {
+        fetch('http://localhost:3333/users')
+            .then((response) => {
+                return response.json()
+            })
+            .then((employees) => {
+                setEmployees(employees);
+                console.log(employees)
+            })
+    }, [updateEmployees])
+
+    const handleUpdate = (updateEmployees) => {
+        setUpdate(updateEmployees + 1);
+    }
 
     return (
         <>
@@ -23,10 +40,10 @@ export const AdminView = () => {
             </div>
             
             <section className="table-section">
-                {view === 'employees' ? <EmployeesList /> : <ProductList /> }
+                {view === 'employees' ? <EmployeesList employees={employees} /> : <ProductList /> }
             </section>
 
-            <CreateAcc open={isOpen} onClose={() => setIsOpen(false)} />
+            <CreateAcc open={isOpen} handleUpdate={handleUpdate} updateEmployees={updateEmployees} onClose={() => setIsOpen(false)} />
             <Footer />
         </>
     )
