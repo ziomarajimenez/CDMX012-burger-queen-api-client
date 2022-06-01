@@ -1,6 +1,30 @@
+import { useEffect, useState } from "react";
 import './EmployeesList.css';
 import { ModifyEmployee } from "../Modify Employee/ModifyEmployee";
-export const EmployeesList = (props) => {
+
+export const EmployeesList = () => {
+    const [employees, setEmployees] = useState();
+
+
+    useEffect(() => {
+        fetch('http://localhost:3333/users')
+            .then((response) => {
+                return response.json()
+            })
+            .then((employees) => {
+                setEmployees(employees);
+            })
+    }, [])
+
+    function reRender() {
+        fetch('http://localhost:3333/users')
+            .then((response) => {
+                return response.json()
+            })
+            .then((employees) => {
+                setEmployees(employees);
+            })
+    }
 
     return (
         <div className="table-wrapper">
@@ -15,18 +39,18 @@ export const EmployeesList = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.employees?.map(employee => {
+                    {employees?.map(employee => {
                         return (
                             <tr key={employee.id}>
                                 <td>{employee.name}</td>
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
-                                <td> <ModifyEmployee id={employee.id}> </ModifyEmployee></td>
+                                <td> <ModifyEmployee id={employee.id} render={reRender}> </ModifyEmployee></td>
                             </tr>
                         );
-                    })}
-
+                    })
+                    }
                 </tbody>
 
             </table>
