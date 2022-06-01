@@ -111,50 +111,10 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "userId": "XdsSmqTD5ag8i3Fqw36MidgVwXG3",
-      "table": "5",
+      "id": 8,
+      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
+      "table": "10",
       "products": [
-        {
-          "qty": "2",
-          "product": "American Coffee",
-          "price": 5
-        },
-        {
-          "qty": "1",
-          "product": "Ham and cheese sandwich",
-          "price": 10
-        }
-      ],
-      "status": "ready",
-      "dateEntry": 1653239920124,
-      "dateProcessed": ""
-    },
-    {
-      "id": 2,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "6",
-      "products": [
-        {
-          "qty": 3,
-          "product": "Coffee with milk",
-          "price": 7
-        }
-      ],
-      "status": "active",
-      "dateEntry": 1653332048928,
-      "dateProcessed": ""
-    },
-    {
-      "id": 3,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "1",
-      "products": [
-        {
-          "product": "American Coffee",
-          "price": 5,
-          "qty": 1
-        },
         {
           "product": "Coffee with milk",
           "price": 7,
@@ -167,14 +127,19 @@
         }
       ],
       "status": "ready",
-      "dateEntry": 1653438349795,
+      "dateEntry": 1654054415796,
       "dateProcessed": ""
     },
     {
-      "id": 4,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "7",
+      "id": 9,
+      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
+      "table": "8",
       "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
         {
           "product": "Coffee with milk",
           "price": 7,
@@ -188,76 +153,11 @@
         {
           "product": "Ham and cheese sandwich",
           "price": 10,
-          "qty": 1
-        }
-      ],
-      "status": "sent",
-      "dateEntry": 1653438400430,
-      "dateProcessed": ""
-    },
-    {
-      "id": 5,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "11",
-      "products": [
-        {
-          "product": "Water 750 ml",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Basic burger",
-          "price": 10,
-          "qty": 1
-        },
-        {
-          "product": "Onion rings",
-          "price": 5,
-          "qty": 1
-        }
-      ],
-      "status": "ready",
-      "dateEntry": 1653523720766,
-      "dateProcessed": ""
-    },
-    {
-      "id": 6,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "9",
-      "products": [
-        {
-          "product": "Water 500 ml",
-          "price": 5,
-          "qty": 1
-        },
-        {
-          "product": "Double burger",
-          "price": 15,
-          "qty": 1
-        }
-      ],
-      "status": "delivered",
-      "dateEntry": 1653679607849,
-      "dateProcessed": ""
-    },
-    {
-      "id": 7,
-      "userId": "RGjCxSz9UUUbD8cJ3q2vCzI8AF53",
-      "table": "67",
-      "products": [
-        {
-          "product": "Water 500 ml",
-          "price": 5,
           "qty": 3
-        },
-        {
-          "product": "Basic burger",
-          "price": 10,
-          "qty": 4
         }
       ],
       "status": "sent",
-      "dateEntry": 1653924417631,
+      "dateEntry": 1654054683007,
       "dateProcessed": ""
     }
   ],
@@ -283,6 +183,30 @@
       "name": "Bob",
       "lastName": "Esponja",
       "email": "bobesponja@gmail.com",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "F7BKsXm0dsWAOCmQn919ex1juCZ2",
+      "name": "Isabela",
+      "lastName": "Huitrón",
+      "email": "isabela1@gmail.com",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "Q9rPPTSXOofRiWUIJ4XWYA0f7l63",
+      "name": "Intento",
+      "lastName": "Intento",
+      "email": "intento@gmail.com",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "yQIkDT9BKmS7xOIAMaeBairYxyn1",
+      "name": "Intento",
+      "lastName": "Intento",
+      "email": "intento1@gmail.com",
       "roles": "Waiter",
       "admin": false
     }

@@ -25,7 +25,7 @@ export const ActiveOrders = () => {
         const userId = currentUser().uid
         const tables = orders.filter(order => { return order.userId === userId });
         return (
-            <>{tables.map(tables => <TableBox tableObject={tables} key={tables._id}></TableBox>)}</>
+            <>{tables.map(tables => <TableBox tableObject={tables} key={tables.id}></TableBox>)}</>
         );
     }
 
