@@ -3,7 +3,8 @@ import {
     getAuth,
     signOut,
     signInWithEmailAndPassword,
-    updateCurrentUser
+    updateCurrentUser,
+    deleteUser
 } from "firebase/auth";
 import { auth } from './firebaseConfig';
 
@@ -35,4 +36,18 @@ export const currentUser = () => {
 
 export const updateUser = async (originalUser) => {
     await updateCurrentUser(auth, originalUser);
+}
+
+// const user = auth.currentUser;
+// const auth = getAuth();
+
+
+export const deleteFirebase = () => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    deleteUser(user).then((response) => {
+        console.log(response)
+    }).catch((error) => {
+        console.log(error)
+    })
 }
