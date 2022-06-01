@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 export const EmployeesList = (props) => {
     const [employees, setEmployees] = useState();
 
+
     useEffect(() => {
         fetch('http://localhost:3333/users')
             .then((response) => {
@@ -37,7 +38,7 @@ export const EmployeesList = (props) => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
-                                <td> <ModifyEmployee> </ModifyEmployee></td>
+                                <td> <ModifyEmployee id={employee.id}> </ModifyEmployee></td>
                             </tr>
                         );
                     })}
