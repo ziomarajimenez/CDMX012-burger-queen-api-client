@@ -126,7 +126,7 @@
           "qty": 1
         }
       ],
-      "status": "ready",
+      "status": "delivered",
       "dateEntry": 1654054415796,
       "dateProcessed": ""
     },
@@ -179,6 +179,31 @@
       "status": "sent",
       "dateEntry": 1654057243441,
       "dateProcessed": ""
+    },
+    {
+      "id": 11,
+      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
+      "table": "6",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 2
+        },
+        {
+          "product": "Natural juice",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654098125294,
+      "dateProcessed": ""
     }
   ],
   "users": [
@@ -212,6 +237,22 @@
       "lastName": "Doe",
       "email": "janedoe@gmail.com",
       "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "FrHupZOGx0T8iPqOHUMFh7ZrvPy2",
+      "name": "Julia",
+      "lastName": "Juárez",
+      "email": "julia@gmail.com",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "vbfiybca6sT0p7OArzSS9cJPOTW2",
+      "name": "Carlos",
+      "lastName": "M.",
+      "email": "carlos@gmail.com",
+      "roles": "Chef",
       "admin": false
     }
   ]
