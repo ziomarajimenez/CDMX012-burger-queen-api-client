@@ -1,4 +1,5 @@
 import './EmployeesList.css';
+import { ModifyEmployee } from "../Modify Employee/ModifyEmployee";
 import { useEffect, useState } from 'react';
 export const EmployeesList = (props) => {
     const [employees, setEmployees] = useState();
@@ -36,6 +37,7 @@ export const EmployeesList = (props) => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
+                                <td> <ModifyEmployee> </ModifyEmployee></td>
                             </tr>
                         );
                     })}
