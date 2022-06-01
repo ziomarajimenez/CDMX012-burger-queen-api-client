@@ -22,7 +22,7 @@ export const EmployeesList = (props) => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
-                                <td> <ModifyEmployee> </ModifyEmployee></td>
+                                <td> <ModifyEmployee id={employee.id}> </ModifyEmployee></td>
                             </tr>
                         );
                     })}
