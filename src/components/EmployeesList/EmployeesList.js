@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import './EmployeesList.css';
 import { ModifyEmployee } from "../Modify Employee/ModifyEmployee";
-
-export const EmployeesList = () => {
+import { useEffect, useState } from 'react';
+export const EmployeesList = (props) => {
     const [employees, setEmployees] = useState();
 
     useEffect(() => {
@@ -31,7 +30,7 @@ export const EmployeesList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {employees?.map(employee => {
+                    {props.employees?.map(employee => {
                         return (
                             <tr key={employee.id}>
                                 <td>{employee.name}</td>
@@ -41,8 +40,8 @@ export const EmployeesList = () => {
                                 <td> <ModifyEmployee> </ModifyEmployee></td>
                             </tr>
                         );
-                    })
-                    }
+                    })}
+
                 </tbody>
 
             </table>

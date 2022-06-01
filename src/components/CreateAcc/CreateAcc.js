@@ -6,9 +6,9 @@ import ReactDOM from "react-dom";
 import badge from '../../assets/Badge.png';
 import { createAccError } from '../../utils/errorMessage';
 
-export const CreateAcc = ({ open, onClose }) => {
-    const [password, setPassword] = useState('');
-    const [passwordConf, setPasswordConf] = useState('');
+export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
+    const [ password, setPassword ] = useState('');
+    const [ passwordConf, setPasswordConf ] = useState('');
 
     const emptyValues = {
         email: '',
@@ -48,7 +48,10 @@ export const CreateAcc = ({ open, onClose }) => {
             })
         };
         fetch('http://localhost:3333/users', requestOptions)
-            .then(response => response.json())
+            .then(response => {
+                response.json();
+                handleUpdate(updateEmployees);
+            })
             .catch(res => console.log(res))
     }
 
@@ -70,8 +73,8 @@ export const CreateAcc = ({ open, onClose }) => {
                     //console.log(uid)
                     updateUser(originalUser); //gets back to the original user
 
-                    //HERE we would need to save the data -----------------
-                    saveNewEmployee(values, uid);
+                //HERE we would need to save the data -----------------
+                    saveNewEmployee(values,uid);
 
                     setValues(emptyValues); //clears the form
                     onClose(); //closes the modal window
