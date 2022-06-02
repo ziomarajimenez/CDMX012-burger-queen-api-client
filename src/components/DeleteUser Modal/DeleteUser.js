@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { deleteFirebase } from '../../lib/firebaseAuth';
 import './DeleteUser.css';
 
-export const DeleteUser = ({ open, onClose, idUser }) => {
+export const DeleteUser = ({ open, onClose, idUser, render }) => {
 
     if (!open) return null;
 
 
     const deleteEmployee = () => {
-        let userId = 'http://localhost:3333/users/' + idUser.id;
+        let userId = 'http://localhost:3333/users/' + idUser;
 
         fetch(userId, { method: 'DELETE' })
             .then(response => response.json())
             .then(onClose)
+            .then(render)
             .catch(res => console.log(res))
 
-        deleteFirebase(idUser)
     }
 
 
