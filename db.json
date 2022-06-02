@@ -113,18 +113,10 @@
   "users": [
     {
       "id": "kwsuDaEqSJcvyDOCEbGE3cPPgZk2",
-      "name": "Zio",
+      "name": "Ziomara",
       "lastName": "Jimenez",
       "email": "ziomara@gmail.com",
       "roles": "Waiter",
-      "admin": false
-    },
-    {
-      "id": "rnUB6Jr8OQUpf9p9B3V6bC7XuXk2",
-      "name": "Isabela",
-      "lastName": "H.",
-      "email": "isabela@gmail.com",
-      "roles": "Chef",
       "admin": false
     },
     {
@@ -134,14 +126,6 @@
       "email": "perla@gmail.com",
       "roles": "Manager",
       "admin": true
-    },
-    {
-      "id": "FrHupZOGx0T8iPqOHUMFh7ZrvPy2",
-      "name": "Julia",
-      "lastName": "Juárez",
-      "email": "julia@gmail.com",
-      "roles": "Waiter",
-      "admin": false
     },
     {
       "id": "vbfiybca6sT0p7OArzSS9cJPOTW2",
@@ -156,22 +140,6 @@
       "name": "Intento",
       "lastName": "Intento",
       "email": "intento123@gmail.com",
-      "roles": "Waiter",
-      "admin": false
-    },
-    {
-      "id": "WlgOLKk4oOSVSiZjrUbJaQe0yQ52",
-      "name": "Intento",
-      "lastName": "Dos",
-      "email": "intento1234@gmail.com",
-      "roles": "Chef",
-      "admin": false
-    },
-    {
-      "id": "3JOWTkKmCgeWdZ7O0hkyZvCvuB93",
-      "name": "Intento",
-      "lastName": "Tres",
-      "email": "intenta@gmail.com",
       "roles": "Waiter",
       "admin": false
     }
