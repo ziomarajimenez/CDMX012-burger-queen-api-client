@@ -31,7 +31,7 @@ export const ProductList = () => {
                 <tbody>
                     { drinks?.map(prod => {
                         return (
-                            <tr key={prod._id}>
+                            <tr key={prod.id}>
                                 <td>{prod.name}</td>
                                 <td>opt</td>
                             </tr>
@@ -50,7 +50,7 @@ export const ProductList = () => {
                 <tbody>
                     { meals?.map(prod => {
                         return (
-                            <tr key={prod._id}>
+                            <tr key={prod.id}>
                                 <td>{prod.name}</td>
                                 <td>opt</td>
                             </tr>
