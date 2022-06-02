@@ -2,7 +2,7 @@ import './ModifyEmployee.css'
 import { DeleteUser } from '../DeleteUser Modal/DeleteUser';
 import { useState } from 'react';
 
-export const ModifyEmployee = (id) => {
+export const ModifyEmployee = ({ id, render }) => {
     const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
@@ -25,7 +25,7 @@ export const ModifyEmployee = (id) => {
                 <option value='Edit'>Edit</option>
                 <option value='Delete' >Delete</option>
             </select>
-            <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} idUser={id}></DeleteUser>
+            <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} idUser={id} render={render}></DeleteUser>
         </>
     );
 }
