@@ -3,7 +3,7 @@ import { DeleteUser } from '../DeleteUser Modal/DeleteUser';
 import { EditEmployee } from '../EditEmployee/EditEmployee';
 import { useState } from 'react';
 
-export const ModifyEmployee = ({ id, name, lastName, email, password, role, handleUpdate }) => {
+export const ModifyEmployee = ({ employee, handleUpdate }) => {
     const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
@@ -27,15 +27,15 @@ export const ModifyEmployee = ({ id, name, lastName, email, password, role, hand
                 <option value='Edit'>Edit</option>
                 <option value='Delete' >Delete</option>
             </select>
-            <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} idUser={id} handleUpdate={handleUpdate}></DeleteUser>
+
+            <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} 
+                idUser={employee.id} 
+                handleUpdate={handleUpdate}>
+            </DeleteUser>
+            
             <EditEmployee open={isOpenEdit} 
                 onClose={() => setIsOpenEdit(false)} 
-                idUser={id} 
-                name={name}
-                lastName={lastName}
-                email={email}
-                password={password}
-                role={role}
+                employee={employee}
                 handleUpdate={handleUpdate}>
             </EditEmployee>
         </>

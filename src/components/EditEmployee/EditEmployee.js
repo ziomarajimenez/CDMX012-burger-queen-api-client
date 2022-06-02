@@ -1,26 +1,26 @@
 import { CreateAccModal } from "../CreateAccModal/CreateAccModal";
 
-export const EditEmployee = ({open, onClose, idUser, name, lastName, email, password, role, handleUpdate}) => {
+export const EditEmployee = ({open, onClose, employee, handleUpdate}) => {
     if (!open) return null;
 
     const userValues = {
-        email: email,
-        password: password,
-        firstName: name,
-        lastName: lastName,
-        role: role
+        email: employee.email,
+        password: employee.password,
+        firstName: employee.name,
+        lastName: employee.lastName,
+        role: employee.role
     };
 
     const saveInformation = (values) => {
         console.log(values)
 
-        const userId = 'http://localhost:3333/users/' + idUser;
+        const userId = 'http://localhost:3333/users/' + employee.id;
 
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                id: idUser,
+                id: employee.id,
                 name: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
