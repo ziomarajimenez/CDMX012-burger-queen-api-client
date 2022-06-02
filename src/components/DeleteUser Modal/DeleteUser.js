@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './DeleteUser.css';
 
-export const DeleteUser = ({ open, onClose, idUser, render }) => {
+export const DeleteUser = ({ open, onClose, idUser, handleUpdate }) => {
 
     if (!open) return null;
 
@@ -13,7 +13,7 @@ export const DeleteUser = ({ open, onClose, idUser, render }) => {
         fetch(userId, { method: 'DELETE' })
             .then(response => response.json())
             .then(onClose)
-            .then(render)
+            .then(handleUpdate)
             .catch(res => console.log(res))
 
     }

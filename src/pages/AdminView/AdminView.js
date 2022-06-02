@@ -41,7 +41,7 @@ export const AdminView = () => {
             </div>
             
             <section className="table-section">
-                {view === 'employees' ? <EmployeesList employees={employees} /> : <ProductList /> }
+                {view === 'employees' ? <EmployeesList employees={employees} handleUpdate={handleUpdate}/> : <ProductList /> }
             </section>
 
             <CreateAcc open={isOpen} handleUpdate={handleUpdate} updateEmployees={updateEmployees} onClose={() => setIsOpen(false)} />
