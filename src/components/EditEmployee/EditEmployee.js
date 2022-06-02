@@ -41,7 +41,9 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role
         <CreateAccModal open={open} 
             onClose={onClose} 
             saveInformation={saveInformation} 
-            initialValues={userValues}>
+            initialValues={userValues}
+            titleText={'Edit employee'}
+            buttonText={'Update information'}>
         </CreateAccModal>
     )
 }

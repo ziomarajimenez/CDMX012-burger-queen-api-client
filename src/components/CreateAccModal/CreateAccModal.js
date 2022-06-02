@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { useState } from 'react';
 import badge from '../../assets/Badge.png';
 
-export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) => {
+export const CreateAccModal = ({open, onClose, saveInformation, initialValues, titleText, buttonText}) => {
     const [values, setValues] = useState(initialValues)
     const [ password, setPassword ] = useState('');
     const [ passwordConf, setPasswordConf ] = useState('');
@@ -44,7 +44,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
 
                 <div className='new-employee-title'>
                     <img src={badge} alt="badge icon" className="badge-icon"></img>
-                    <h1 className='new-employee-h1'>Register a new employee</h1>
+                    <h1 className='new-employee-h1'>{titleText}</h1>
                 </div>
 
                 <form onSubmit={handleSubmit} className='create-acc-form' id='createAccForm'>
@@ -105,7 +105,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
 
                     <span id='errorArea' className='error-msg' />
 
-                    <button type='submit' className='new-employe-btn'>Add new employee</button>
+                    <button type='submit' className='new-employe-btn'>{buttonText}</button>
 
                 </form>
             </div>

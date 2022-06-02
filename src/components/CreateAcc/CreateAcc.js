@@ -65,7 +65,9 @@ export const CreateAcc = ({ open, onClose, handleUpdate }) => {
         <CreateAccModal open={open} 
             onClose={onClose} 
             saveInformation={saveInformation} 
-            initialValues={emptyValues}>
+            initialValues={emptyValues}
+            titleText={'Register a new employee'}
+            buttonText={'Add new employee'}>
         </CreateAccModal>
     );
 }
