@@ -5,8 +5,8 @@ import badge from '../../assets/Badge.png';
 
 export const CreateAccModal = ({open, onClose, saveInformation, initialValues, titleText, buttonText}) => {
     const [values, setValues] = useState(initialValues)
-    const [ password, setPassword ] = useState('');
-    const [ passwordConf, setPasswordConf ] = useState('');
+    const [ password, setPassword ] = useState(initialValues.password);
+    const [ passwordConf, setPasswordConf ] = useState(initialValues.password);
 
     if (!open) return null;
 
@@ -84,6 +84,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
                         id='password'
                         name='password'
                         placeholder='mypassword123'
+                        value={password}
                         onChange={(e) => setPassword(e.target.value)}>
                     </input>
 
@@ -93,6 +94,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
                         id='passwordConf'
                         name='password-conf'
                         placeholder='mypassword123'
+                        value={passwordConf}
                         onChange={(e) => setPasswordConf(e.target.value)}>
                     </input>
 

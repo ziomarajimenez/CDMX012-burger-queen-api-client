@@ -3,7 +3,7 @@ import { DeleteUser } from '../DeleteUser Modal/DeleteUser';
 import { EditEmployee } from '../EditEmployee/EditEmployee';
 import { useState } from 'react';
 
-export const ModifyEmployee = ({ id, name, lastName, email, role, handleUpdate }) => {
+export const ModifyEmployee = ({ id, name, lastName, email, password, role, handleUpdate }) => {
     const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
@@ -34,6 +34,7 @@ export const ModifyEmployee = ({ id, name, lastName, email, role, handleUpdate }
                 name={name}
                 lastName={lastName}
                 email={email}
+                password={password}
                 role={role}
                 handleUpdate={handleUpdate}>
             </EditEmployee>

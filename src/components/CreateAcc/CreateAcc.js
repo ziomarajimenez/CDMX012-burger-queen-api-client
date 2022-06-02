@@ -23,6 +23,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate }) => {
                 name: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
+                password: values.password,
                 roles: values.role,
                 admin: values.role === 'Manager' ? true : false
             })

@@ -1,11 +1,11 @@
 import { CreateAccModal } from "../CreateAccModal/CreateAccModal";
 
-export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role, handleUpdate}) => {
+export const EditEmployee = ({open, onClose, idUser, name, lastName, email, password, role, handleUpdate}) => {
     if (!open) return null;
 
     const userValues = {
         email: email,
-        password: '',
+        password: password,
         firstName: name,
         lastName: lastName,
         role: role

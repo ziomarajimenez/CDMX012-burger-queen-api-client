@@ -27,6 +27,7 @@ export const EmployeesList = ({employees, handleUpdate}) => {
                                     name={employee.name}
                                     lastName={employee.lastName}
                                     email={employee.email}
+                                    password={employee.password}
                                     role={employee.roles}
                                     handleUpdate={handleUpdate}> 
                                 </ModifyEmployee></td>
