@@ -34,7 +34,8 @@ export const ModifyEmployee = ({ id, name, lastName, email, role, handleUpdate }
                 name={name}
                 lastName={lastName}
                 email={email}
-                role={role}>
+                role={role}
+                handleUpdate={handleUpdate}>
             </EditEmployee>
         </>
     );

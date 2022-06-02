@@ -1,6 +1,6 @@
 import { CreateAccModal } from "../CreateAccModal/CreateAccModal";
 
-export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role}) => {
+export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role, handleUpdate}) => {
     if (!open) return null;
 
     const userValues = {
@@ -26,12 +26,13 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role
                 admin: values.role === 'Manager' ? true : false
             })
         };
+        
         fetch(userId, requestOptions)
             .then(response => {
                 console.log('hola');
                 response.json();
                 onClose();
-                /* handleUpdate(updateEmployees); */
+                handleUpdate();
             })
             .catch(res => console.log(res))
     }
