@@ -30,6 +30,7 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role
             .then(response => {
                 console.log('hola');
                 response.json();
+                onClose();
                 /* handleUpdate(updateEmployees); */
             })
             .catch(res => console.log(res))
