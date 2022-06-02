@@ -1,8 +1,9 @@
 import './ModifyEmployee.css'
 import { DeleteUser } from '../DeleteUser Modal/DeleteUser';
+import { EditEmployee } from '../EditEmployee/EditEmployee';
 import { useState } from 'react';
 
-export const ModifyEmployee = ({ id, render }) => {
+export const ModifyEmployee = ({ id, name, lastName, email, role, render }) => {
     const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
@@ -10,6 +11,7 @@ export const ModifyEmployee = ({ id, render }) => {
     const handleOnChange = (evt) => {
         if (evt.target.value === 'Delete') {
             setIsOpenDelete(true);
+            setIsOpenEdit(false);
         } else if (evt.target.value === 'Edit') {
             console.log('saludos');
             setIsOpenDelete(false);
@@ -26,6 +28,14 @@ export const ModifyEmployee = ({ id, render }) => {
                 <option value='Delete' >Delete</option>
             </select>
             <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} idUser={id} render={render}></DeleteUser>
+            <EditEmployee open={isOpenEdit} 
+                onClose={() => setIsOpenEdit(false)} 
+                idUser={id} 
+                name={name}
+                lastName={lastName}
+                email={email}
+                role={role}>
+            </EditEmployee>
         </>
     );
 }

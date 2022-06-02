@@ -24,6 +24,7 @@ export const AdminView = () => {
     }, [updateEmployees])
 
     const handleUpdate = (updateEmployees) => {
+        console.log('saludines')
         setUpdate(updateEmployees + 1);
     }
 

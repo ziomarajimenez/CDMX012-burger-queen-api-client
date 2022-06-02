@@ -109,103 +109,7 @@
       "menu": "dinner"
     }
   ],
-  "orders": [
-    {
-      "id": 8,
-      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
-      "table": "10",
-      "products": [
-        {
-          "product": "Coffee with milk",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Ham and cheese sandwich",
-          "price": 10,
-          "qty": 1
-        }
-      ],
-      "status": "delivered",
-      "dateEntry": 1654054415796,
-      "dateProcessed": ""
-    },
-    {
-      "id": 9,
-      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
-      "table": "8",
-      "products": [
-        {
-          "product": "American Coffee",
-          "price": 5,
-          "qty": 1
-        },
-        {
-          "product": "Coffee with milk",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Natural juice",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Ham and cheese sandwich",
-          "price": 10,
-          "qty": 3
-        }
-      ],
-      "status": "sent",
-      "dateEntry": 1654054683007,
-      "dateProcessed": ""
-    },
-    {
-      "id": 10,
-      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
-      "table": "7",
-      "products": [
-        {
-          "product": "Water 750 ml",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Basic burger",
-          "price": 10,
-          "qty": 2
-        }
-      ],
-      "status": "sent",
-      "dateEntry": 1654057243441,
-      "dateProcessed": ""
-    },
-    {
-      "id": 11,
-      "userId": "zcoimQ5aDjSBqD4Yqu2HBkSy5Ut2",
-      "table": "6",
-      "products": [
-        {
-          "product": "American Coffee",
-          "price": 5,
-          "qty": 2
-        },
-        {
-          "product": "Natural juice",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "product": "Ham and cheese sandwich",
-          "price": 10,
-          "qty": 1
-        }
-      ],
-      "status": "sent",
-      "dateEntry": 1654098125294,
-      "dateProcessed": ""
-    }
-  ],
+  "orders": [],
   "users": [
     {
       "id": "kwsuDaEqSJcvyDOCEbGE3cPPgZk2",
@@ -232,14 +136,6 @@
       "admin": true
     },
     {
-      "id": "XtTsH1FxucMXGaveA8VXYrWPfTR2",
-      "name": "Jane",
-      "lastName": "Doe",
-      "email": "janedoe@gmail.com",
-      "roles": "Waiter",
-      "admin": false
-    },
-    {
       "id": "FrHupZOGx0T8iPqOHUMFh7ZrvPy2",
       "name": "Julia",
       "lastName": "Juárez",
@@ -253,6 +149,30 @@
       "lastName": "M.",
       "email": "carlos@gmail.com",
       "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "fBV7GeW1GZecgYgG0qtvrm1ubHm1",
+      "name": "Intento",
+      "lastName": "Intento",
+      "email": "intento123@gmail.com",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "WlgOLKk4oOSVSiZjrUbJaQe0yQ52",
+      "name": "Intento",
+      "lastName": "Dos",
+      "email": "intento1234@gmail.com",
+      "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "3JOWTkKmCgeWdZ7O0hkyZvCvuB93",
+      "name": "Intento",
+      "lastName": "Tres",
+      "email": "intenta@gmail.com",
+      "roles": "Waiter",
       "admin": false
     }
   ]

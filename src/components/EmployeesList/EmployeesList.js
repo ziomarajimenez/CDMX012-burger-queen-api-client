@@ -46,7 +46,13 @@ export const EmployeesList = () => {
                                 <td>{employee.lastName}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.roles}</td>
-                                <td> <ModifyEmployee id={employee.id} render={reRender}> </ModifyEmployee></td>
+                                <td> <ModifyEmployee id={employee.id} 
+                                    name={employee.name}
+                                    lastName={employee.lastName}
+                                    email={employee.email}
+                                    role={employee.roles}
+                                    render={reRender}> 
+                                </ModifyEmployee></td>
                             </tr>
                         );
                     })

@@ -1,14 +1,44 @@
-import './CreateAcc.css';
+import '../CreateAcc/CreateAcc.css';
 import ReactDOM from "react-dom";
+import { useState } from 'react';
 import badge from '../../assets/Badge.png';
 
-const CreateAccModal = () => {
+export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) => {
+    const [values, setValues] = useState(initialValues)
+    const [ password, setPassword ] = useState('');
+    const [ passwordConf, setPasswordConf ] = useState('');
+
+    if (!open) return null;
+
+    const handleChange = (evt) => {
+        const { target } = evt;
+        const { name, value } = target;
+
+        const newValues = {
+            ...values,
+            [name]: value,
+        };
+
+        setValues(newValues);
+    }
+
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
+        const errorArea = document.getElementById('errorArea');
+
+        if (password === passwordConf) {
+            saveInformation(errorArea, password, values, setValues);
+        } else { //handle when passwords don't match
+            errorArea.innerText = 'Passwords do not match, please try again.';
+        }
+    }
+
     return ReactDOM.createPortal(
         <>
             <div className='wrapper' />
             <div className='modal new-employee-modal'>
                 <button className="close-modal" onClick={() => {
-                    setValues(emptyValues);
+                    setValues(initialValues);
                     onClose();
                 }}> X </button>
 
