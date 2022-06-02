@@ -8,7 +8,7 @@ export const EditEmployee = ({open, onClose, employee, handleUpdate}) => {
         password: employee.password,
         firstName: employee.name,
         lastName: employee.lastName,
-        role: employee.role
+        role: employee.roles
     };
 
     const saveInformation = (values) => {
