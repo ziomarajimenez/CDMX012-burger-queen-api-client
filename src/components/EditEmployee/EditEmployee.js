@@ -12,6 +12,8 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, pass
     };
 
     const saveInformation = (values) => {
+        console.log(values)
+
         const userId = 'http://localhost:3333/users/' + idUser;
 
         const requestOptions = {
@@ -22,6 +24,7 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, pass
                 name: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
+                password: values.password,
                 roles: values.role,
                 admin: values.role === 'Manager' ? true : false
             })

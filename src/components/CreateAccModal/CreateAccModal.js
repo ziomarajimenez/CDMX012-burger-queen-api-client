@@ -23,6 +23,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
     }
 
     const handleSubmit = (evt) => {
+        values.password = password;
         evt.preventDefault();
         const errorArea = document.getElementById('errorArea');
 
@@ -85,7 +86,10 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
                         name='password'
                         placeholder='mypassword123'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}>
+                        onChange={(e) => {
+                            console.log(e.target.value)
+                            setPassword(e.target.value)
+                        }}>
                     </input>
 
                     <label htmlFor='password-conf'>Confirm password</label>
