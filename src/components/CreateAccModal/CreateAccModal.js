@@ -27,7 +27,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
         const errorArea = document.getElementById('errorArea');
 
         if (password === passwordConf) {
-            saveInformation(errorArea, password, values, setValues);
+            saveInformation(values, setValues, errorArea, password);
         } else { //handle when passwords don't match
             errorArea.innerText = 'Passwords do not match, please try again.';
         }

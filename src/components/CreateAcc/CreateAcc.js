@@ -36,7 +36,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
             .catch(res => console.log(res))
     }
 
-    const saveInformation = (errorArea, password, values, setValues) => {
+    const saveInformation = (values, setValues, errorArea, password) => {
         values.password = password; //setting the matched passwords as value
 
         const originalUser = currentUser(); // current user, user that originally loged in

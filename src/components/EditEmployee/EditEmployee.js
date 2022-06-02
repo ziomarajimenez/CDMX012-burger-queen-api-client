@@ -11,7 +11,9 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role
         role: role
     };
 
-    const saveInformation = (errorArea, values, setValues) => {
+    const saveInformation = (values) => {
+        const userId = 'http://localhost:3333/users/' + idUser;
+
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -24,10 +26,11 @@ export const EditEmployee = ({open, onClose, idUser, name, lastName, email, role
                 admin: values.role === 'Manager' ? true : false
             })
         };
-        fetch('http://localhost:3333/users', requestOptions)
+        fetch(userId, requestOptions)
             .then(response => {
                 console.log('hola');
                 response.json();
+                /* handleUpdate(updateEmployees); */
             })
             .catch(res => console.log(res))
     }
