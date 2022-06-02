@@ -87,7 +87,6 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
                         placeholder='mypassword123'
                         value={password}
                         onChange={(e) => {
-                            console.log(e.target.value)
                             setPassword(e.target.value)
                         }}>
                     </input>

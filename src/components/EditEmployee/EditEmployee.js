@@ -12,7 +12,6 @@ export const EditEmployee = ({open, onClose, employee, handleUpdate}) => {
     };
 
     const saveInformation = (values) => {
-        console.log(values)
 
         const userId = 'http://localhost:3333/users/' + employee.id;
 
@@ -32,7 +31,6 @@ export const EditEmployee = ({open, onClose, employee, handleUpdate}) => {
         
         fetch(userId, requestOptions)
             .then(response => {
-                console.log('hola');
                 response.json();
                 onClose();
                 handleUpdate();

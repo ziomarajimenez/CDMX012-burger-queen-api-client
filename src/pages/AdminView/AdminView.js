@@ -20,7 +20,6 @@ export const AdminView = () => {
             .then((employees) => {
                 setEmployees(employees);
                 console.log(employees)
-                console.log(updateEmployees);
             })
     }, [updateEmployees])
 

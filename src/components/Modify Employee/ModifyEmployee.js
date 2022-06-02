@@ -13,7 +13,6 @@ export const ModifyEmployee = ({ employee, handleUpdate }) => {
             setIsOpenDelete(true);
             setIsOpenEdit(false);
         } else if (evt.target.value === 'Edit') {
-            console.log('saludos');
             setIsOpenDelete(false);
             setIsOpenEdit(true);
         }
@@ -32,7 +31,7 @@ export const ModifyEmployee = ({ employee, handleUpdate }) => {
                 idUser={employee.id} 
                 handleUpdate={handleUpdate}>
             </DeleteUser>
-            
+
             <EditEmployee open={isOpenEdit} 
                 onClose={() => setIsOpenEdit(false)} 
                 employee={employee}
