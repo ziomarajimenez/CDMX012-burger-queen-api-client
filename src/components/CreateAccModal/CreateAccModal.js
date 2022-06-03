@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import { useState } from 'react';
 import badge from '../../assets/Badge.png';
 
-export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) => {
+export const CreateAccModal = ({open, onClose, saveInformation, initialValues, titleText, buttonText}) => {
     const [values, setValues] = useState(initialValues)
-    const [ password, setPassword ] = useState('');
-    const [ passwordConf, setPasswordConf ] = useState('');
+    const [ password, setPassword ] = useState(initialValues.password);
+    const [ passwordConf, setPasswordConf ] = useState(initialValues.password);
 
     if (!open) return null;
 
@@ -23,6 +23,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
     }
 
     const handleSubmit = (evt) => {
+        values.password = password;
         evt.preventDefault();
         const errorArea = document.getElementById('errorArea');
 
@@ -44,7 +45,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
 
                 <div className='new-employee-title'>
                     <img src={badge} alt="badge icon" className="badge-icon"></img>
-                    <h1 className='new-employee-h1'>Register a new employee</h1>
+                    <h1 className='new-employee-h1'>{titleText}</h1>
                 </div>
 
                 <form onSubmit={handleSubmit} className='create-acc-form' id='createAccForm'>
@@ -84,7 +85,10 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
                         id='password'
                         name='password'
                         placeholder='mypassword123'
-                        onChange={(e) => setPassword(e.target.value)}>
+                        value={password}
+                        onChange={(e) => {
+                            setPassword(e.target.value)
+                        }}>
                     </input>
 
                     <label htmlFor='password-conf'>Confirm password</label>
@@ -93,6 +97,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
                         id='passwordConf'
                         name='password-conf'
                         placeholder='mypassword123'
+                        value={passwordConf}
                         onChange={(e) => setPasswordConf(e.target.value)}>
                     </input>
 
@@ -105,7 +110,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues}) 
 
                     <span id='errorArea' className='error-msg' />
 
-                    <button type='submit' className='new-employe-btn'>Add new employee</button>
+                    <button type='submit' className='new-employe-btn'>{buttonText}</button>
 
                 </form>
             </div>

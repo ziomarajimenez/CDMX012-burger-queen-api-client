@@ -3,7 +3,7 @@ import { createAccWithEmail, currentUser, updateUser } from '../../lib/firebaseA
 import { createAccError } from '../../utils/errorMessage';
 import { CreateAccModal } from '../CreateAccModal/CreateAccModal';
 
-export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
+export const CreateAcc = ({ open, onClose, handleUpdate }) => {
     const emptyValues = {
         email: '',
         password: '',
@@ -23,6 +23,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
                 name: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
+                password: values.password,
                 roles: values.role,
                 admin: values.role === 'Manager' ? true : false
             })
@@ -31,7 +32,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
             .then(response => {
                 console.log('hola');
                 response.json();
-                handleUpdate(updateEmployees);
+                handleUpdate();
             })
             .catch(res => console.log(res))
     }
@@ -65,7 +66,9 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
         <CreateAccModal open={open} 
             onClose={onClose} 
             saveInformation={saveInformation} 
-            initialValues={emptyValues}>
+            initialValues={emptyValues}
+            titleText={'Register a new employee'}
+            buttonText={'Add new employee'}>
         </CreateAccModal>
     );
 }
