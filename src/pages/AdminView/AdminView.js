@@ -5,7 +5,7 @@ import { CreateAcc } from "../../components/CreateAcc/CreateAcc";
 import { EmployeesList } from "../../components/EmployeesList/EmployeesList";
 import { ProductList } from "../../components/ProductList/ProductList";
 import './AdminView.css';
-import { AddProductModal } from "../../components/AddProductModal/AddProductModal";
+import { AddProduct } from '../../components/AddProduct/AddProduct';
 
 export const AdminView = () => {
     const [ view, setView ] = useState('employees');
@@ -48,7 +48,7 @@ export const AdminView = () => {
             </section>
 
             <CreateAcc open={isOpen} handleUpdate={handleUpdate} updateEmployees={updateEmployees} onClose={() => setIsOpen(false)} />
-            <AddProductModal open={isOpenProd} onClose={() => setIsOpenProd(false)}/>
+            <AddProduct open={isOpenProd} onClose={() => setIsOpenProd(false)}/>
 
             <Footer />
         </>

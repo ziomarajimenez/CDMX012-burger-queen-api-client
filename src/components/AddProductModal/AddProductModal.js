@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import './AddProductModal.css';
+import mealIcon from '../../assets/meal-icon.png';
 
-export const AddProductModal = ({open, onClose}) => {
-    const defaultValues = {
-        id: '',
-        name: '',
-        price: '',
-        type: 'beverage',
-        dateEntry: '',
-        menu: 'breakfast'
-    };
-
+export const AddProductModal = ({open, onClose, defaultValues, saveInfo}) => {
     const [ values, setValues ] = useState(defaultValues);
     const [ lastProduct, setlastProduct ] = useState();
 
@@ -26,29 +19,6 @@ export const AddProductModal = ({open, onClose}) => {
 
     if (!open) return null;
 
-    const saveNewProduct = (values) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                id: lastProduct.id + 1, //fetch values
-                name: values.name,
-                price: values.price,
-                type: values.type,
-                dateEntry: new Date().getTime(),
-                menu: values.menu
-            })
-        };
-        fetch('http://localhost:3333/products', requestOptions)
-            .then(response => {
-                console.log('saved');
-                response.json();
-                setValues(defaultValues);
-                onClose()
-            })
-            .catch(res => console.log(res))
-    }
-
     const handleChange = (evt) => {
         const { target } = evt;
         const { name, value } = target;
@@ -63,7 +33,7 @@ export const AddProductModal = ({open, onClose}) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        saveNewProduct(values)
+        saveInfo(values, setValues, lastProduct);
     }
 
     return ReactDOM.createPortal(
@@ -73,10 +43,11 @@ export const AddProductModal = ({open, onClose}) => {
                 <button className="close-modal" onClick={onClose}> X </button>
 
                 <div className='new-prod-title'>
+                    <img src={mealIcon} alt='meal icon' className="meal-icon"/>
                     <h1 className='new-prod-h1'>Register a new product</h1>
                 </div>
 
-                <form onSubmit={handleSubmit} className='create-acc-form' id='createAccForm'>
+                <form onSubmit={handleSubmit} className='create-acc-form new-prod-form' id='newProdForm'>
                     <label htmlFor='name'>Name of the product</label>
                     <input
                         type='text'
