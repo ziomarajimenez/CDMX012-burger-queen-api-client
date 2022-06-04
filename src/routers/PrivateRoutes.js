@@ -21,17 +21,8 @@ export const PrivateRoutes = () => {
 
     const getUser = () => {
         const docRef = doc(db, "employees", user.uid);
-
         const docSnap = getDoc(docRef);
         return docSnap
-
-        // if (docSnap.exists()) {
-        //     console.log(docSnap.data())
-        //     return docSnap.data();
-        // } else {
-        //     // doc.data() will be undefined in this case
-        //     console.log("No such document!");
-        // }
     }
 
     getUser().then((res) => {
