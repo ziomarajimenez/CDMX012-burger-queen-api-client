@@ -1,23 +1,10 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import './ProductList.css';
+import { ModifyProduct } from '../ModifyProduct/ModifyProduct';
 
-export const ProductList = () => {
-    const [ products, setProducts ] = useState();
-
-    useEffect(() => {
-        fetch('http://localhost:3333/products')
-            .then((response) => {
-                return response.json()
-            })
-            .then((prod) => {
-                setProducts(prod);
-            })
-    }, [])
-
+export const ProductList = ({products, handleUpdateProd}) => {
     const drinks = products?.filter(prod => prod.type === 'beverage')
     const meals = products?.filter(prod => prod.type === 'meal' || prod.type === 'side dish' || prod.type === 'burger');
-
-    //console.log(products)
 
     return (
         <div className="table-wrapper products-table">
@@ -33,7 +20,13 @@ export const ProductList = () => {
                         return (
                             <tr key={prod.id}>
                                 <td>{prod.name}</td>
-                                <td>opt</td>
+                                <td> <ModifyProduct
+                                name={prod.name}
+                                price={prod.price}
+                                type={prod.type}
+                                menu={prod.menu}
+                                handleUpdateProd={handleUpdateProd}
+                                /> </td>
                             </tr>
                         );
                     }) }
@@ -52,7 +45,13 @@ export const ProductList = () => {
                         return (
                             <tr key={prod.id}>
                                 <td>{prod.name}</td>
-                                <td>opt</td>
+                                <td> <ModifyProduct id={prod.id}
+                                name={prod.name}
+                                price={prod.price}
+                                type={prod.type}
+                                menu={prod.menu}
+                                handleUpdateProd={handleUpdateProd}
+                                /> </td>
                             </tr>
                         );
                     }) }
