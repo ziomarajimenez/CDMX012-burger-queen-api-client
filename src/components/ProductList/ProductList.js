@@ -45,7 +45,7 @@ export const ProductList = ({products, handleUpdateProd}) => {
                         return (
                             <tr key={prod.id}>
                                 <td>{prod.name}</td>
-                                <td> <ModifyProduct
+                                <td> <ModifyProduct id={prod.id}
                                 name={prod.name}
                                 price={prod.price}
                                 type={prod.type}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { EditProduct } from "../EditProduct/EditProduct";
 
-export const ModifyProduct = ({ handleUpdateProd, name, price, type, menu }) => {
+export const ModifyProduct = ({ handleUpdateProd, id, name, price, type, menu }) => {
     //const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
@@ -26,10 +26,11 @@ export const ModifyProduct = ({ handleUpdateProd, name, price, type, menu }) => 
                 <option value='Delete' >Delete</option>
             </select>
 
-            {/* modales */}
+            {/* falta el modal de borrar */}
             <EditProduct 
                 open={isOpenEdit} 
                 onClose={() => setIsOpenEdit(false)}
+                idProd={id}
                 name={name}
                 price={price}
                 type={type}

@@ -1,6 +1,6 @@
 import { AddProductModal } from '../AddProductModal/AddProductModal';
 
-export const EditProduct = ({open, onClose, name, price, type, menu, handleUpdateProd}) => {
+export const EditProduct = ({open, onClose, idProd, name, price, type, menu, handleUpdateProd}) => {
     if (!open) return null;
 
     const prodValues = {
@@ -10,41 +10,37 @@ export const EditProduct = ({open, onClose, name, price, type, menu, handleUpdat
         menu: menu,
     };
 
-    /* const saveInformation = (values) => {
-        const userId = 'http://localhost:3333/users/' + idUser;
+    const saveInformation = (values) => {
+        const productToEdit = 'http://localhost:3333/products/' + idProd;
 
         const requestOptions = {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                id: idUser,
-                name: values.firstName,
-                lastName: values.lastName,
-                email: values.email,
-                roles: values.role,
-                admin: values.role === 'Manager' ? true : false
+                id: idProd,
+                name: values.name,
+                price: values.price,
+                type: values.type,
+                menu: values.menu,
             })
         };
         
-        fetch(userId, requestOptions)
+        fetch(productToEdit, requestOptions)
             .then(response => {
-                console.log('hola');
+                console.log('product edited');
                 response.json();
                 onClose();
-                handleUpdate();
+                handleUpdateProd();
             })
             .catch(res => console.log(res))
-    } */
-
-    const saveInfo = () => {
-        console.log('edición guardada')
     }
+
 
     return(
         <AddProductModal 
             open={open} 
             onClose={onClose} 
-            saveInfo={saveInfo} 
+            saveInfo={saveInformation} 
             defaultValues={prodValues}
             titleText='Edit the product information' 
             btnText='Save'>
