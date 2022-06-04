@@ -4,7 +4,7 @@ import { createAccError } from '../../utils/errorMessage';
 import { CreateAccModal } from '../CreateAccModal/CreateAccModal';
 import { saveFirestore } from '../../lib/firestore';
 
-export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
+export const CreateAcc = ({ open, onClose, handleUpdate }) => {
     const emptyValues = {
         email: '',
         password: '',
@@ -24,6 +24,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
                 name: values.firstName,
                 lastName: values.lastName,
                 email: values.email,
+                password: values.password,
                 roles: values.role,
                 admin: values.role === 'Manager' ? true : false
             })
@@ -31,7 +32,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
         fetch('http://localhost:3333/users', requestOptions)
             .then(response => {
                 response.json();
-                handleUpdate(updateEmployees);
+                handleUpdate();
             })
             .catch(res => console.log(res))
     }
@@ -69,11 +70,13 @@ export const CreateAcc = ({ open, onClose, handleUpdate, updateEmployees }) => {
             });
     }
 
-    return (
-        <CreateAccModal open={open}
-            onClose={onClose}
-            saveInformation={saveInformation}
-            initialValues={emptyValues}>
+    return(
+        <CreateAccModal open={open} 
+            onClose={onClose} 
+            saveInformation={saveInformation} 
+            initialValues={emptyValues}
+            titleText={'Register a new employee'}
+            buttonText={'Add new employee'}>
         </CreateAccModal>
     );
 }
