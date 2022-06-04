@@ -28,7 +28,7 @@ export const AdminView = () => {
 
     const handleUpdate = (updateEmployees) => {
         setUpdate(updateEmployees + 1);
-    }
+    };
 
     const [ products, setProducts ] = useState();
     const [ updateProd, setUpdateProd ] = useState(0);
@@ -45,11 +45,12 @@ export const AdminView = () => {
 
     const handleUpdateProd = () => {
         setUpdateProd(updateProd + 1);
-    }
+    };
 
     return (
         <>
             <Header />
+
             <div className="top-buttons">
                 <div className="selection-buttons">
                     <button type="button" className="employees-btn" onClick={()=>setView('employees')}>Employees</button>
@@ -64,7 +65,7 @@ export const AdminView = () => {
             <section className="table-section">
                 { view === 'employees' ? 
                     <EmployeesList employees={employees} handleUpdate={handleUpdate} /> : 
-                    <ProductList products={products} /> }
+                    <ProductList products={products} handleUpdateProd={handleUpdateProd} /> }
             </section>
 
             <CreateAcc 
