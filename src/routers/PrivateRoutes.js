@@ -48,5 +48,15 @@ export const PrivateRoutes = () => {
                 <Route path="/" element={<AdminView />} />
             </Routes>
         );
+    } else if (role === 'Chef') {
+        return (
+            // HERE WE'LL PUT THE CHEF ROUTES
+            <Routes>
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/" element={<Mainscreen />} />
+                <Route path="/activeorders" element={<ActiveOrders />} />
+                <Route path="/verify-order" element={<VerifyOrder />} />
+            </Routes>
+        );
     }
 }
