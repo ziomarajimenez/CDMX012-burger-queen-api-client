@@ -1,8 +1,8 @@
 import { db } from "./firebaseConfig";
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 
 export function saveFirestore(values, uid) {
-    return addDoc(collection(db, "employees"), {
+    setDoc(doc(db, "employees", uid), {
         id: uid,
         name: values.firstName,
         lastName: values.lastName,
