@@ -5,10 +5,12 @@ import { CreateAcc } from "../../components/CreateAcc/CreateAcc";
 import { EmployeesList } from "../../components/EmployeesList/EmployeesList";
 import { ProductList } from "../../components/ProductList/ProductList";
 import './AdminView.css';
+import { AddProduct } from '../../components/AddProduct/AddProduct';
 
 export const AdminView = () => {
     const [ view, setView ] = useState('employees');
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ isOpenProd, setIsOpenProd ] = useState(false);
     const [ employees, setEmployees ] = useState();
     const [ updateEmployees, setUpdate ] = useState(0);
   
@@ -19,7 +21,7 @@ export const AdminView = () => {
             })
             .then((employees) => {
                 setEmployees(employees);
-                console.log(employees)
+                //console.log(employees)
             })
     }, [updateEmployees])
 
@@ -36,7 +38,9 @@ export const AdminView = () => {
                     <button type="button" className="products-btn" onClick={()=>setView('products')}>Products</button>
                 </div>
 
-                <button type="button" onClick={()=>setIsOpen(true)} className="add-acc-btn">+</button>
+                { view === 'employees' ? 
+                    <button type="button" onClick={()=>setIsOpen(true)} className="add-acc-btn">+</button> :
+                    <button type="button" onClick={()=>setIsOpenProd(true)} className="add-acc-btn">+</button> }
             </div>
             
             <section className="table-section">
@@ -44,6 +48,8 @@ export const AdminView = () => {
             </section>
 
             <CreateAcc open={isOpen} handleUpdate={handleUpdate} onClose={() => setIsOpen(false)} />
+            <AddProduct open={isOpenProd} onClose={() => setIsOpenProd(false)}/>
+
             <Footer />
         </>
     )

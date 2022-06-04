@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "_id": "1",
+      "id": 1,
       "name": "American Coffee",
       "price": 5,
       "image": "",
@@ -10,7 +10,7 @@
       "menu": "breakfast"
     },
     {
-      "_id": "2",
+      "id": 2,
       "name": "Coffee with milk",
       "price": 7,
       "image": "",
@@ -19,7 +19,7 @@
       "menu": "breakfast"
     },
     {
-      "_id": "3",
+      "id": 3,
       "name": "Natural juice",
       "price": 7,
       "image": "",
@@ -28,7 +28,7 @@
       "menu": "breakfast"
     },
     {
-      "_id": "4",
+      "id": 4,
       "name": "Ham and cheese sandwich",
       "price": 10,
       "image": "",
@@ -37,7 +37,7 @@
       "menu": "breakfast"
     },
     {
-      "_id": "5",
+      "id": 5,
       "name": "Water 500 ml",
       "price": 5,
       "image": "",
@@ -46,7 +46,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "6",
+      "id": 6,
       "name": "Water 750 ml",
       "price": 7,
       "image": "",
@@ -55,7 +55,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "7",
+      "id": 7,
       "name": "Soda 500 ml",
       "price": 7,
       "image": "",
@@ -64,7 +64,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "8",
+      "id": 8,
       "name": "Soda 750 ml",
       "price": 10,
       "image": "",
@@ -73,7 +73,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "9",
+      "id": 9,
       "name": "Basic burger",
       "price": 10,
       "image": "",
@@ -82,7 +82,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "10",
+      "id": 10,
       "name": "Double burger",
       "price": 15,
       "image": "",
@@ -91,7 +91,7 @@
       "menu": "dinner"
     },
     {
-      "_id": "11",
+      "id": 11,
       "name": "French fries",
       "price": 5,
       "image": "",
@@ -100,12 +100,20 @@
       "menu": "dinner"
     },
     {
-      "_id": "12",
+      "id": 12,
       "name": "Onion rings",
       "price": 5,
       "image": "",
       "type": "side dish",
       "dateEntry": "16/05/22",
+      "menu": "dinner"
+    },
+    {
+      "id": 13,
+      "name": "Pizza",
+      "price": "15",
+      "type": "meal",
+      "dateEntry": 1654268001859,
       "menu": "dinner"
     }
   ],

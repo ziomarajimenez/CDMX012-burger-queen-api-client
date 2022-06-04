@@ -1,0 +1,33 @@
+.products-table {
+    display: flex;
+}
+
+.beverages-table {
+    table-layout: fixed;
+    width: 50%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.beverages-table thead th:nth-child(1) {
+    width: 80%;
+}
+
+.beverages-table thead th:nth-child(2) {
+    width: 20%;
+}
+
+.meals-table {
+    table-layout: fixed;
+    width: 50%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.meals-table thead th:nth-child(1) {
+    width: 80%;
+}
+
+.meals-table thead th:nth-child(2) {
+    width: 20%;
+}

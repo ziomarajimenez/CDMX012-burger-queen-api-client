@@ -19,13 +19,13 @@ export const Menu = (props) => {
             <div className='beverages'>
                 <img src={beverageIcon} alt="beverage icon" className="beverageIcon"></img>
                 <div className='beveragesProducts'>
-                    {beverages.map(products => <ProductBox product={products.name} orderProducts={props.orderProducts} key={products._id}></ProductBox>)}
+                    {beverages.map(products => <ProductBox product={products.name} orderProducts={props.orderProducts} key={products.id}></ProductBox>)}
                 </div>
             </div>
             <div className='meal'>
                 <img src={mealIcon} alt="meal icon" className="mealIcon"></img>
                 <div className='mealProducts'>
-                    {meal.map((products) => <ProductBox product={products.name} orderProducts={props.orderProducts} key={products._id}></ProductBox>)}
+                    {meal.map((products) => <ProductBox product={products.name} orderProducts={props.orderProducts} key={products.id}></ProductBox>)}
                 </div>
             </div>
         </section>
