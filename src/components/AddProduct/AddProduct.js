@@ -1,6 +1,6 @@
 import { AddProductModal } from "../AddProductModal/AddProductModal";
 
-export const AddProduct = ({open, onClose}) => {
+export const AddProduct = ({open, onClose, handleUpdateProd}) => {
     const defaultValues = {
         id: '',
         name: '',
@@ -29,6 +29,7 @@ export const AddProduct = ({open, onClose}) => {
             .then(response => {
                 console.log('saved');
                 response.json();
+                handleUpdateProd();
                 setValues(defaultValues);
                 onClose()
             })
@@ -41,6 +42,8 @@ export const AddProduct = ({open, onClose}) => {
         onClose={onClose} 
         defaultValues={defaultValues} 
         saveInfo={saveNewProduct}
+        titleText='Register a new product'
+        btnText='Add new product'
     />
   )
 }

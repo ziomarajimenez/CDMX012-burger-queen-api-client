@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import './ProductList.css';
 
-export const ProductList = () => {
-    const [ products, setProducts ] = useState();
-
-    useEffect(() => {
-        fetch('http://localhost:3333/products')
-            .then((response) => {
-                return response.json()
-            })
-            .then((prod) => {
-                setProducts(prod);
-            })
-    }, [])
-
+export const ProductList = ({products}) => {
     const drinks = products?.filter(prod => prod.type === 'beverage')
     const meals = products?.filter(prod => prod.type === 'meal' || prod.type === 'side dish' || prod.type === 'burger');
 

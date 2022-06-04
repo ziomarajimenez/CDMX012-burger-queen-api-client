@@ -11,6 +11,7 @@ export const AdminView = () => {
     const [ view, setView ] = useState('employees');
     const [ isOpen, setIsOpen ] = useState(false);
     const [ isOpenProd, setIsOpenProd ] = useState(false);
+
     const [ employees, setEmployees ] = useState();
     const [ updateEmployees, setUpdate ] = useState(0);
   
@@ -29,6 +30,23 @@ export const AdminView = () => {
         setUpdate(updateEmployees + 1);
     }
 
+    const [ products, setProducts ] = useState();
+    const [ updateProd, setUpdateProd ] = useState(0);
+
+    useEffect(() => {
+        fetch('http://localhost:3333/products')
+            .then((response) => {
+                return response.json()
+            })
+            .then((prod) => {
+                setProducts(prod);
+            })
+    }, [updateProd])
+
+    const handleUpdateProd = () => {
+        setUpdateProd(updateProd + 1);
+    }
+
     return (
         <>
             <Header />
@@ -44,11 +62,21 @@ export const AdminView = () => {
             </div>
             
             <section className="table-section">
-                {view === 'employees' ? <EmployeesList employees={employees} handleUpdate={handleUpdate}/> : <ProductList /> }
+                { view === 'employees' ? 
+                    <EmployeesList employees={employees} handleUpdate={handleUpdate} /> : 
+                    <ProductList products={products} /> }
             </section>
 
-            <CreateAcc open={isOpen} handleUpdate={handleUpdate} updateEmployees={updateEmployees} onClose={() => setIsOpen(false)} />
-            <AddProduct open={isOpenProd} onClose={() => setIsOpenProd(false)}/>
+            <CreateAcc 
+                open={isOpen} 
+                handleUpdate={handleUpdate} 
+                updateEmployees={updateEmployees} 
+                onClose={() => setIsOpen(false)} />
+
+            <AddProduct 
+                open={isOpenProd} 
+                onClose={() => setIsOpenProd(false)}
+                handleUpdateProd={handleUpdateProd} />
 
             <Footer />
         </>

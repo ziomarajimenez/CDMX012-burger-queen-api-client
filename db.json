@@ -107,14 +107,6 @@
       "type": "side dish",
       "dateEntry": "16/05/22",
       "menu": "dinner"
-    },
-    {
-      "id": 13,
-      "name": "Pizza",
-      "price": "15",
-      "type": "meal",
-      "dateEntry": 1654268001859,
-      "menu": "dinner"
     }
   ],
   "orders": [],
