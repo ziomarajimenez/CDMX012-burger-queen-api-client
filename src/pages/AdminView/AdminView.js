@@ -11,7 +11,6 @@ export const AdminView = () => {
     const [ view, setView ] = useState('employees');
     const [ isOpen, setIsOpen ] = useState(false);
     const [ isOpenProd, setIsOpenProd ] = useState(false);
-
     const [ employees, setEmployees ] = useState();
     const [ updateEmployees, setUpdate ] = useState(0);
   
@@ -69,11 +68,11 @@ export const AdminView = () => {
             </section>
 
             <CreateAcc open={isOpen} handleUpdate={handleUpdate} onClose={() => setIsOpen(false)} />
-
             <AddProduct 
                 open={isOpenProd} 
                 onClose={() => setIsOpenProd(false)}
                 handleUpdateProd={handleUpdateProd} />
+
 
             <Footer />
         </>

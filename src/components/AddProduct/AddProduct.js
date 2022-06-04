@@ -1,5 +1,6 @@
 import { AddProductModal } from "../AddProductModal/AddProductModal";
 
+
 export const AddProduct = ({open, onClose, handleUpdateProd}) => {
     const defaultValues = {
         id: '',

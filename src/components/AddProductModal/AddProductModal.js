@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import './AddProductModal.css';
 import mealIcon from '../../assets/meal-icon.png';
 
+
 export const AddProductModal = ({open, onClose, defaultValues, saveInfo, titleText, btnText}) => {
+
     const [ values, setValues ] = useState(defaultValues);
     const [ lastProduct, setlastProduct ] = useState();
 
@@ -45,7 +47,7 @@ export const AddProductModal = ({open, onClose, defaultValues, saveInfo, titleTe
                 <div className='new-prod-title'>
                     <img src={mealIcon} alt='meal icon' className="meal-icon"/>
                     <h1 className='new-prod-h1'>{titleText}</h1>
-                </div>
+
 
                 <form onSubmit={handleSubmit} className='create-acc-form new-prod-form' id='newProdForm'>
                     <label htmlFor='name'>Name of the product</label>
@@ -85,6 +87,7 @@ export const AddProductModal = ({open, onClose, defaultValues, saveInfo, titleTe
                     <span id='errorArea' className='error-msg' />
 
                     <button type='submit' className='new-employe-btn'>{btnText}</button>
+
 
                 </form>
             </div>

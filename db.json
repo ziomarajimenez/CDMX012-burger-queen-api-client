@@ -105,27 +105,53 @@
       "price": 5,
       "type": "side dish",
       "menu": "dinner"
+    },
+    {
+      "id": 13,
+      "name": "Pizza",
+      "price": "15",
+      "type": "meal",
+      "dateEntry": 1654268001859,
+      "menu": "dinner"
     }
   ],
   "orders": [],
   "users": [
     {
-      "id": "6KhzJpZi9YV7BMobl6DHEt9N1JD2",
-      "name": "Zio",
-      "lastName": "Jimenez",
-      "email": "ziomara@gmail.com",
-      "password": "ziomarazio33",
+      "id": "2j7cL6RMCHM8qbOrIYMk1ZHHDv32",
+      "name": "Karen",
+      "lastName": "Doe",
+      "email": "karendoe@hotmail.com",
+      "password": "test1234",
       "roles": "Manager",
       "admin": true
     },
     {
-      "id": "V7IR9Pr99xQddAzWhaFIT4XkgQX2",
-      "name": "Dani",
-      "lastName": "Dani",
-      "email": "dani@gmail.com",
-      "password": "danidani3",
+      "id": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "name": "Isabela",
+      "lastName": "H.",
+      "email": "isabela@gmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "bgel2tcrhaX8H2mAM05hi5jYX9Q2",
+      "name": "Ziomara",
+      "lastName": "Jiménez",
+      "email": "ziomara@gmail.com",
+      "password": "test1234",
       "roles": "Chef",
       "admin": false
+    },
+    {
+      "id": "Be9QSo07gmPCTo32OYiAViTvIMS2",
+      "name": "Perla",
+      "lastName": "Del Ángel",
+      "email": "perla_gda@hotmail.com",
+      "password": "test1234",
+      "roles": "Manager",
+      "admin": true
     }
   ]
 }
