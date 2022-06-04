@@ -110,35 +110,21 @@
   "orders": [],
   "users": [
     {
-      "id": "kwsuDaEqSJcvyDOCEbGE3cPPgZk2",
-      "name": "Ziomara",
+      "id": "6KhzJpZi9YV7BMobl6DHEt9N1JD2",
+      "name": "Zio",
       "lastName": "Jimenez",
       "email": "ziomara@gmail.com",
-      "roles": "Waiter",
-      "admin": false
-    },
-    {
-      "id": "7pQWEffPhZNg6PZ7fwc6pUbmwFq1",
-      "name": "Perla",
-      "lastName": "Del Angel",
-      "email": "perla@gmail.com",
+      "password": "ziomarazio33",
       "roles": "Manager",
       "admin": true
     },
     {
-      "id": "vbfiybca6sT0p7OArzSS9cJPOTW2",
-      "name": "Carlos",
-      "lastName": "M.",
-      "email": "carlos@gmail.com",
+      "id": "V7IR9Pr99xQddAzWhaFIT4XkgQX2",
+      "name": "Dani",
+      "lastName": "Dani",
+      "email": "dani@gmail.com",
+      "password": "danidani3",
       "roles": "Chef",
-      "admin": false
-    },
-    {
-      "id": "fBV7GeW1GZecgYgG0qtvrm1ubHm1",
-      "name": "Intento",
-      "lastName": "Intento",
-      "email": "intento123@gmail.com",
-      "roles": "Waiter",
       "admin": false
     }
   ]

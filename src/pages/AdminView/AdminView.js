@@ -26,7 +26,7 @@ export const AdminView = () => {
             })
     }, [updateEmployees])
 
-    const handleUpdate = (updateEmployees) => {
+    const handleUpdate = () => {
         setUpdate(updateEmployees + 1);
     };
 
@@ -68,11 +68,7 @@ export const AdminView = () => {
                     <ProductList products={products} handleUpdateProd={handleUpdateProd} /> }
             </section>
 
-            <CreateAcc 
-                open={isOpen} 
-                handleUpdate={handleUpdate} 
-                updateEmployees={updateEmployees} 
-                onClose={() => setIsOpen(false)} />
+            <CreateAcc open={isOpen} handleUpdate={handleUpdate} onClose={() => setIsOpen(false)} />
 
             <AddProduct 
                 open={isOpenProd} 
