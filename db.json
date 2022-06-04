@@ -112,22 +112,67 @@
   "orders": [],
   "users": [
     {
-      "id": "6KhzJpZi9YV7BMobl6DHEt9N1JD2",
-      "name": "Zio",
-      "lastName": "Jimenez",
-      "email": "ziomara@gmail.com",
-      "password": "ziomarazio33",
+      "id": "HWRsPBcvriUYGtVAfyyxkxrqz0h1",
+      "name": "Isabela",
+      "lastName": "H.",
+      "email": "isabela@gmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "kfxkM3fWs6Uta1GsE4w38vICSZi1",
+      "name": "Perla",
+      "lastName": "Admi",
+      "email": "perla_admi@hotmail.com",
+      "password": "test1234",
       "roles": "Manager",
       "admin": true
     },
     {
-      "id": "V7IR9Pr99xQddAzWhaFIT4XkgQX2",
-      "name": "Dani",
-      "lastName": "Dani",
-      "email": "dani@gmail.com",
-      "password": "danidani3",
+      "id": "k3ZIeRYzC6Y0VX9atgPu4GKRi4F3",
+      "name": "Ziomara",
+      "lastName": "Jiménez",
+      "email": "ziomara_chef@gmail.com",
+      "password": "test1234",
       "roles": "Chef",
       "admin": false
     },
+    {
+      "id": "LFYUHxEGYwSV4RJlQw7YjWb5JOs2",
+      "name": "Nena",
+      "lastName": "H.",
+      "email": "nena@gmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "xOs9NBrKuDRbYq4S2HqSuGEUru32",
+      "name": "udbfsdkjbfjsdkd",
+      "lastName": "gdgdfg",
+      "email": "dfgdfgdf@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "XCZcFI7C5cPwKLvG7TGdI4bm5Xj2",
+      "name": "dgberdfegb",
+      "lastName": "sdgsdg",
+      "email": "perla_sfsdfsdfdfgda@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "2j7cL6RMCHM8qbOrIYMk1ZHHDv32",
+      "name": "Karen",
+      "lastName": "Doe",
+      "email": "karendoe@hotmail.com",
+      "password": "test1234",
+      "roles": "Manager",
+      "admin": true
+    }
   ]
 }

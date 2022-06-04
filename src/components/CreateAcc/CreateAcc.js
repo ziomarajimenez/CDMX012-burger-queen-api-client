@@ -62,18 +62,16 @@ export const CreateAcc = ({ open, onClose, handleUpdate }) => {
                 setValues(emptyValues); //clears the form
                 onClose(); //closes the modal window
                 return saveFirestore(values, uid)
-            }).then((hola) => {
-                console.log(hola)
             })
             .catch(error => { //handle erros in the createacc process
                 errorArea.innerText = createAccError(error.code);
             });
     }
 
-    return(
-        <CreateAccModal open={open} 
-            onClose={onClose} 
-            saveInformation={saveInformation} 
+    return (
+        <CreateAccModal open={open}
+            onClose={onClose}
+            saveInformation={saveInformation}
             initialValues={emptyValues}
             titleText={'Register a new employee'}
             buttonText={'Add new employee'}>
