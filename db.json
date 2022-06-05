@@ -118,15 +118,6 @@
   "orders": [],
   "users": [
     {
-      "id": "2j7cL6RMCHM8qbOrIYMk1ZHHDv32",
-      "name": "Karen",
-      "lastName": "Doe",
-      "email": "karendoe@hotmail.com",
-      "password": "test1234",
-      "roles": "Manager",
-      "admin": true
-    },
-    {
       "id": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
       "name": "Isabela",
       "lastName": "H.",

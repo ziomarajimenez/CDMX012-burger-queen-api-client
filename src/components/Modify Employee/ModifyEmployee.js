@@ -28,8 +28,9 @@ export const ModifyEmployee = ({ employee, handleUpdate }) => {
             </select>
 
             <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} 
-                idUser={employee.id} 
-                handleUpdate={handleUpdate}>
+                idr={employee.id} 
+                handleUpdate={handleUpdate}
+                section={'employees'}>
             </DeleteUser>
 
             <EditEmployee open={isOpenEdit} 

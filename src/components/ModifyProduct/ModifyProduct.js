@@ -2,17 +2,16 @@ import { useState } from "react";
 import { EditProduct } from "../EditProduct/EditProduct";
 
 export const ModifyProduct = ({ handleUpdateProd, id, name, price, type, menu }) => {
-    //const [isOpenDelete, setIsOpenDelete] = useState(false);
+    const [isOpenDelete, setIsOpenDelete] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
     const [selected, setSelected] = useState("");
 
     const handleOnChange = (evt) => {
         if (evt.target.value === 'Delete') {
-            //setIsOpenDelete(true);
+            setIsOpenDelete(true);
             setIsOpenEdit(false);
         } else if (evt.target.value === 'Edit') {
-            console.log('saludos');
-            //setIsOpenDelete(false);
+            setIsOpenDelete(false);
             setIsOpenEdit(true);
         }
         setSelected("");
@@ -26,7 +25,6 @@ export const ModifyProduct = ({ handleUpdateProd, id, name, price, type, menu })
                 <option value='Delete' >Delete</option>
             </select>
 
-            {/* falta el modal de borrar */}
             <EditProduct 
                 open={isOpenEdit} 
                 onClose={() => setIsOpenEdit(false)}
