@@ -98,34 +98,10 @@
       "type": "side dish",
       "dateEntry": "16/05/22",
       "menu": "dinner"
-    },
-    {
-      "id": 12,
-      "name": "Onion rings",
-      "price": 5,
-      "type": "side dish",
-      "menu": "dinner"
-    },
-    {
-      "id": 13,
-      "name": "Pizza",
-      "price": "15",
-      "type": "meal",
-      "dateEntry": 1654268001859,
-      "menu": "dinner"
     }
   ],
   "orders": [],
   "users": [
-    {
-      "id": "2j7cL6RMCHM8qbOrIYMk1ZHHDv32",
-      "name": "Karen",
-      "lastName": "Doe",
-      "email": "karendoe@hotmail.com",
-      "password": "test1234",
-      "roles": "Manager",
-      "admin": true
-    },
     {
       "id": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
       "name": "Isabela",

@@ -1,5 +1,5 @@
 import './ModifyEmployee.css'
-import { DeleteUser } from '../DeleteUser Modal/DeleteUser';
+import { Delete } from '../Delete Modal/Delete';
 import { EditEmployee } from '../EditEmployee/EditEmployee';
 import { useState } from 'react';
 
@@ -27,10 +27,11 @@ export const ModifyEmployee = ({ employee, handleUpdate }) => {
                 <option value='Delete' >Delete</option>
             </select>
 
-            <DeleteUser open={isOpenDelete} onClose={() => setIsOpenDelete(false)} 
-                idUser={employee.id} 
-                handleUpdate={handleUpdate}>
-            </DeleteUser>
+            <Delete open={isOpenDelete} onClose={() => setIsOpenDelete(false)} 
+                id={employee.id} 
+                handleUpdate={handleUpdate}
+                section={'employees'}>
+            </Delete>
 
             <EditEmployee open={isOpenEdit} 
                 onClose={() => setIsOpenEdit(false)} 
