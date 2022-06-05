@@ -56,6 +56,19 @@ export const AdminView = () => {
                     <button type="button" className="products-btn" onClick={()=>setView('products')}>Products</button>
                 </div>
 
+                { view === 'employees' ? <style> {`
+                    .products-btn {
+                        background-color: white;
+                        color: #B5A8A8;
+                    }
+                `}</style> 
+                : <style>{`
+                    .employees-btn {
+                        background-color: white;
+                        color: #B5A8A8;
+                    }
+                `}</style> }
+
                 { view === 'employees' ? 
                     <button type="button" onClick={()=>setIsOpen(true)} className="add-acc-btn">+</button> :
                     <button type="button" onClick={()=>setIsOpenProd(true)} className="add-acc-btn">+</button> }

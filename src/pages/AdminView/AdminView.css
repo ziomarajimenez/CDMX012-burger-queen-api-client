@@ -21,3 +21,12 @@
     background-color: var(--light-gray);
 
 }
+
+.selection-buttons {
+    display: flex;
+}
+
+.employees-btn, .products-btn {
+    border-radius: 5%;
+    margin: 1rem 0;
+}
