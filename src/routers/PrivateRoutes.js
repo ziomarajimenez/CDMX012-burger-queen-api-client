@@ -7,6 +7,7 @@ import { Mainscreen } from '../pages/Main screen/mainScreen'
 import { ActiveOrders } from '../pages/Active orders/ActiveOrders';
 import { VerifyOrder } from '../pages/VerifyOrder/VerifyOrder';
 import { AdminView } from "../pages/AdminView/AdminView";
+import { ChefView } from '../pages/ChefView/ChefView'
 import { doc, getDoc } from "firebase/firestore";
 import { currentUser } from '../lib/firebaseAuth'
 import { db } from '../lib/firebaseConfig';
@@ -46,16 +47,13 @@ export const PrivateRoutes = () => {
         return (
             <Routes>
                 <Route path="/" element={<AdminView />} />
+                <Route path="/chef" element={<ChefView />} />
             </Routes>
         );
     } else if (role === 'Chef') {
         return (
-            // HERE WE'LL PUT THE CHEF ROUTES
             <Routes>
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/" element={<Mainscreen />} />
-                <Route path="/activeorders" element={<ActiveOrders />} />
-                <Route path="/verify-order" element={<VerifyOrder />} />
+                <Route path="/" element={<ChefView />} />
             </Routes>
         );
     }
