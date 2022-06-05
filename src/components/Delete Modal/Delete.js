@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './DeleteUser.css';
+import './Delete.css';
 
-export const DeleteUser = ({ open, onClose, id, handleUpdate, section }) => {
+export const Delete = ({ open, onClose, id, handleUpdate, section }) => {
 
     if (!open) return null;
 
@@ -38,7 +38,7 @@ export const DeleteUser = ({ open, onClose, id, handleUpdate, section }) => {
                     <p className='txt-message'> Are you sure you want to delete this? </p>
                     <div className="button-wraper">
                         <button className="cancel-delete"> Cancel </button>
-                        <button className="confirm-delete" onClick={section === 'employees' ? deleteEmployee : console.log('saludos')}> Confirm </button>
+                        <button className="confirm-delete" onClick={section === 'employees' ? deleteEmployee : deleteProduct}> Confirm </button>
                     </div>
 
                 </div>

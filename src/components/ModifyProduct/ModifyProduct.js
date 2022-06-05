@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { EditProduct } from "../EditProduct/EditProduct";
+import { Delete } from "../Delete Modal/Delete";
 
 export const ModifyProduct = ({ handleUpdateProd, id, name, price, type, menu }) => {
     const [isOpenDelete, setIsOpenDelete] = useState(false);
@@ -24,6 +25,14 @@ export const ModifyProduct = ({ handleUpdateProd, id, name, price, type, menu })
                 <option value='Edit'>Edit</option>
                 <option value='Delete' >Delete</option>
             </select>
+
+            <Delete
+                open={isOpenDelete}
+                onClose={() => setIsOpenDelete(false)}
+                id={id}
+                handleUpdate={handleUpdateProd}
+                section={'products'}
+            />
 
             <EditProduct 
                 open={isOpenEdit} 
