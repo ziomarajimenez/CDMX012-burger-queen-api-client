@@ -18,7 +18,7 @@ export const PrivateRoutes = () => {
     const [role, setRole] = useState('');
 
     const user = currentUser();
-    console.log(user);
+    //console.log(user);
 
     const getUser = () => {
         const docRef = doc(db, "employees", user.uid);
