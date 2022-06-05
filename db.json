@@ -100,7 +100,89 @@
       "menu": "dinner"
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "1",
+      "products": [
+        {
+          "qty": "2",
+          "product": "American Coffee"
+        },
+        {
+          "qty": "1",
+          "product": "Ham and cheese sandwich"
+        }
+      ],
+      "status": "ready",
+      "dateEntry": "",
+      "dateProcessed": ""
+    },
+    {
+      "id": "2",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "5",
+      "products": [
+        {
+          "qty": "2",
+          "product": "American Coffee"
+        },
+        {
+          "qty": "1",
+          "product": "Ham and cheese sandwich"
+        }
+      ],
+      "status": "ready",
+      "dateEntry": "",
+      "dateProcessed": ""
+    },
+    {
+      "id": "3",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "3",
+      "products": [
+        {
+          "product": "Soda 500 ml",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Double burger",
+          "price": 15,
+          "qty": 1
+        },
+        {
+          "product": "Onion rings",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654388156575,
+      "dateProcessed": ""
+    },
+    {
+      "id": "4",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "9",
+      "products": [
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654459887375,
+      "dateProcessed": ""
+    }
+  ],
   "users": [
     {
       "id": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",

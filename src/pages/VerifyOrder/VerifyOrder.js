@@ -13,7 +13,7 @@ export const VerifyOrder = () => {
     const order = location.state.order;
 
 
-    const [ isOpenModal, setIsOpenModal ] = useState(false)
+    const [isOpenModal, setIsOpenModal] = useState(false)
 
     const modifyOrder = () => {
         navigate('/orders', {
@@ -24,7 +24,7 @@ export const VerifyOrder = () => {
     }
 
     const filtered = order.products.filter((product) => {
-        return product.qty > 0 ;
+        return product.qty > 0;
     });
 
     const [total, setTotal] = useState('0')
@@ -99,7 +99,7 @@ export const VerifyOrder = () => {
             <SentModal open={isOpenModal} onClose={() => {
                 setIsOpenModal(false);
                 navigate('/');
-                }}/>
+            }} />
             <Footer />
         </div>
     )

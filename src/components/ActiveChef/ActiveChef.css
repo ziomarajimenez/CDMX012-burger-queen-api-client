@@ -1,0 +1,29 @@
+
+.top-order{
+    display:flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin: 5px 40px;
+}
+
+.btn-ready{
+    width: 20%;
+    height: 7%;
+    border-radius: 10px;
+    background-color: rgba(94, 93, 93, 0.6);
+    border-color: rgba(94, 93, 93, 0.6);
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bolder;
+}
+
+.product-order{
+    display:flex;
+    flex-direction: column;
+    margin: 0.2% 3%;
+}
+
+.wrapper-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.2% 5% 4%;
+}
