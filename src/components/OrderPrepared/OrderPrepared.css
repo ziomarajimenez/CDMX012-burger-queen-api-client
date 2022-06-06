@@ -1,20 +1,26 @@
 .modal-btns{
     display: flex;
-    width: 60%;
+    width: 80%;
     justify-content: space-around;
     margin-top: 1em;
 }
 
 .modal-btns button{
-    width: auto;
     padding-left: 1em;
     padding-right: 1em;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    font-weight: bolder;
+    margin-top: 5px;
 }
 
 .cancel-ready{
-    background-color: var(--light-gray);
-    color: var(--darker-gray);
-    border: 1.75px solid var(--darker-gray);
+    background-color: #EBE8E8;
+    color: black;
+    border: 1.75px solid var(--main-color);
+    border-radius: 10px;
+    
 }
 
 .txt-prepared{

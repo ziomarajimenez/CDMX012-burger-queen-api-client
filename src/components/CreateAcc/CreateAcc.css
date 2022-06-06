@@ -49,4 +49,5 @@
     background-color: var(--light-gray);
     color: rgba(0, 0, 0, 0.7); */
     font-weight: bolder;
+    border-radius: 10px;
 }

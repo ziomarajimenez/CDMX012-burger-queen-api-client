@@ -7,7 +7,7 @@
     background-color: #FFFF;
     padding: 2.5em;
     z-index: 1000;
-    border: 1.75px solid #5E5D5D;
+    border: 1.75px solid var(--main-color);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -27,18 +27,17 @@
     width: 180px;
     height: 40px;
     background-color:#EBE8E8;
-    border-radius: 8px;
-    border-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 .confirm-delete{
-    color: black;
+    color: #EBE8E8;
     font-weight: 800;
     width: 180px;
     height: 40px;
-    background-color: rgba(251, 189, 8, 0.2);
-    border-radius: 8px;
-    border-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--main-color);
+    border: 1.75px solid var(--main-color);
+    border-radius: 10px;
 }
 
 .button-wraper{
