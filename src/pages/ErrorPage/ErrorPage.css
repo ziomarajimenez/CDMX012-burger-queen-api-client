@@ -1,0 +1,29 @@
+/* *{
+    border: 1px solid black;
+} */
+
+#bigTxt{
+    color: var(--main-color);
+    font-weight:900;
+}
+
+.txt-error{
+    margin-top: -25%;
+    width: 70%;
+}
+
+.go-back{
+    height: 15%;
+    width: 30%;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+#footer{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
