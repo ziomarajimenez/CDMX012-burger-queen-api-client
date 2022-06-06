@@ -30,7 +30,10 @@ const DeliveredModal = ({ open, onClose, id, accept }) => {
                 <div className='modal-error'>
                     <button className="close-modal" onClick={onClose}> X </button>
                     <p className='txt-message'>Was the order successfully delivered? :)</p>
-                    <button className="order-delivered" onClick={() => { orderDelivered() }} > Yes </button>
+                    <section className='button-wrapper'>
+                        <button className="order-delivered" onClick={() => { orderDelivered() }} > Yes </button>
+                        <button className="cancel-deliver" onClick={onClose} > No </button>
+                    </section>
                 </div>
             </div>
         </>,

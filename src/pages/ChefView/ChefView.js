@@ -16,7 +16,7 @@ export const ChefView = () => {
                 return response.json()
             })
             .then((orders) => {
-                setOrders(orders)
+                setOrders(orders.reverse())
             })
     }, [updateOrders]);
 

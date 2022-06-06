@@ -1,7 +1,4 @@
-import {
-    Routes,
-    Route,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Orders } from '../pages/Orders/Orders';
 import { Mainscreen } from '../pages/Main screen/mainScreen'
 import { ActiveOrders } from '../pages/Active orders/ActiveOrders';
@@ -9,12 +6,11 @@ import { VerifyOrder } from '../pages/VerifyOrder/VerifyOrder';
 import { AdminView } from "../pages/AdminView/AdminView";
 import { ChefView } from '../pages/ChefView/ChefView'
 import { doc, getDoc } from "firebase/firestore";
-import { currentUser } from '../lib/firebaseAuth'
+import { currentUser } from '../lib/firebaseAuth';
 import { db } from '../lib/firebaseConfig';
 import { useState } from "react";
 
 export const PrivateRoutes = () => {
-
     const [role, setRole] = useState('');
 
     const user = currentUser();
