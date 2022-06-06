@@ -17,7 +17,7 @@ export const ChefView = () => {
             .then((orders) => {
                 setOrders(orders)
             })
-    }, [])
+    }, []);
 
     return (
 

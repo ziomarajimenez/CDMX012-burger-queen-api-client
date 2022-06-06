@@ -1,0 +1,22 @@
+.modal-btns{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+.modal-btns button{
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.cancel-ready{
+    background-color: var(--light-gray);
+    color: var(--darker-gray);
+    border: 1.75px solid var(--darker-gray);
+}
+
+.txt-prepared{
+    font-size: 1.5em;
+}
