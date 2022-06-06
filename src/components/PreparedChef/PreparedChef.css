@@ -1,0 +1,8 @@
+.bottom-order {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-order p {
+    margin-right: 5%;
+}

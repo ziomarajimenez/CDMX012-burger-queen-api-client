@@ -29,6 +29,20 @@ export const ChefView = () => {
                     <button type="button" className="active-btn" onClick={() => setView('active')}>Active</button>
                     <button type="button" className="prepared-btn" onClick={() => setView('prepared')}>Prepared</button>
                 </div>
+
+                { view === 'active' ? <style> {`
+                    .prepared-btn {
+                        background-color: white;
+                        color: #B5A8A8;
+                    }
+                `}</style> 
+                : <style>{`
+                    .active-btn {
+                        background-color: white;
+                        color: #B5A8A8;
+                    }
+                `}</style> }
+
             </div>
             <section className="table-section">
                 {view === 'active' ? <ActiveChef orders={orders} /> : <PreparedChef orders={orders} />}

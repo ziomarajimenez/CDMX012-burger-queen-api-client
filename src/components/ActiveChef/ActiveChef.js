@@ -16,7 +16,7 @@ export const ActiveChef = ({ orders }) => {
                             <h3>Table {order.table} </h3>
                             <h3>Recieved {new Date(order.dateEntry).toLocaleString({ timeZone: 'America/Mexico_City' })} </h3>
                         </section>
-                        <section className="bottom-order">
+                        <section className="active-bottom-order">
                             <div key={index} className='product-order'>
                                 {order.products.map((product, indexProduct) => {
                                     return (
