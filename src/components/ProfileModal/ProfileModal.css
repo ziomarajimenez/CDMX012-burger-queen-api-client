@@ -13,8 +13,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* top: 0;
-    right: 0; */
     background-color: #FFFF;
     padding: 2.5em;
     z-index: 1000;
@@ -23,6 +21,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.profile-modal{
+    width: 20%;
 }
 
 .close-modal { 
@@ -41,17 +43,39 @@
 }
 
 .log-out-btn {
+    width: 70%;
+    height: 2em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-weight: 590;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 0.8em;
 }
 
 .logout-icon {
-    height: 90%;
+    height: 80%;
+    padding-left: 0.2em;
 }
 
-.user-email {
-    font-style: italic;
-    padding-top: 1em;
-    padding-bottom: 1em;
+.profile-pic{
+    margin-bottom: 0.8em;
+    height: 3.4em;
+}
+
+.profile-txt p{
+    margin-bottom: 0.3em;
+}
+
+.user-role{
+    font-weight: bold;
+}
+
+.display-name{
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.user-email{
+    font-size: 0.85em;
 }

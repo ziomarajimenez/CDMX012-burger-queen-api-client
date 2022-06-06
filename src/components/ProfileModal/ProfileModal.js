@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './ProfileModal.css';
 import profilepic from '../../assets/Profile-pic-placeholder.png';
@@ -10,12 +9,19 @@ export default function ProfileModal({ open, onClose, user, logOut }) {
     return ReactDOM.createPortal(
         <>
             <div className='wrapper' />
-            <div className='modal'>
+            <div className='modal profile-modal'>
                 <button className="close-modal" onClick={onClose}> X </button>
-                <img src={profilepic} alt="user's profile pic" className='profile-pic'></img>
-                <p className='user-email'>{user.email}</p>
-                <button onClick={()=>{logOut()}} className='log-out-btn'>
 
+                <img src={profilepic} alt="user's profile pic" className='profile-pic'></img>
+
+                <div className='profile-txt'>
+                    <p className='user-role'>{user.roles}</p>
+                    <p className='display-name'>{user.name} {user.lastName}</p>
+                    <p className='user-email'>{user.email}</p>
+                </div>
+                
+
+                <button onClick={()=>{logOut()}} className='log-out-btn'>
                     Log out
                     <img src={logoutIcon} alt='logout-icon' className='logout-icon'></img>
                 </button>
