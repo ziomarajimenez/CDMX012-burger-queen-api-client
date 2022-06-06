@@ -24,13 +24,13 @@ export const Orders = () => {
             })
     }, [])
 
-    let orderProducts = products.map((product) => {return {product: product.name, price: product.price}});
+    let orderProducts = products.map((product) => { return { product: product.name, price: product.price } });
 
     let initialTable = '';
 
     let initialMenu = 'breakfast';
 
-    if(location.state !== null){
+    if (location.state !== null) {
         orderProducts = location.state.order.products;
         initialTable = location.state.order.client;
         initialMenu = location.state.order.menu;
@@ -46,22 +46,22 @@ export const Orders = () => {
 
     const breakfastMenu = () => {
         return (
-            <Menu products={products} 
-            btn={'dinnerBtn'} 
-            type={'breakfast'} 
-            name={'breakfastMenu'} 
-            orderProducts={orderProducts}>
+            <Menu products={products}
+                btn={'dinnerBtn'}
+                type={'breakfast'}
+                name={'breakfastMenu'}
+                orderProducts={orderProducts}>
             </Menu>
         );
     }
 
     const dinnerMenu = () => {
         return (
-            <Menu products={products} 
-            btn={'breakfastBtn'} 
-            type={'dinner'} 
-            name={'dinnerMenu'} 
-            orderProducts={orderProducts}>
+            <Menu products={products}
+                btn={'breakfastBtn'}
+                type={'dinner'}
+                name={'dinnerMenu'}
+                orderProducts={orderProducts}>
             </Menu>
         );
     }
@@ -69,24 +69,24 @@ export const Orders = () => {
     return (
         <>
             <Header />
-            <h1>Orders</h1>
+            <section className="top-orders">
+                {/* <h1>Orders</h1> */}
+                <div className="menuButtons">
+                    <button className='breakfastBtn' onClick={() => setMenu('breakfast')}>Breakfast</button>
+                    <button className='dinnerBtn' onClick={() => setMenu('dinner')}>Dinner</button>
+                </div>
 
-            <div className="table-input">
-                <label htmlFor="table-num" className="table-label">Table: </label>
-                <input type="number" id="tableNum" name="table-num" min="1" max="30" onChange={handleChangeTable} value={table}></input>
-            </div>
-
-            <div className="menuButtons">
-                <button className='breakfastBtn' onClick={() => setMenu('breakfast')}>Breakfast</button>
-                <button className='dinnerBtn' onClick={() => setMenu('dinner')}>Dinner</button>
-            </div>
+                <div className="table-input">
+                    <label htmlFor="table-num" className="table-label">Table: </label>
+                    <input type="number" id="tableNum" name="table-num" min="1" max="30" onChange={handleChangeTable} value={table}></input>
+                </div>
+            </section>
             {menu === 'breakfast' ? breakfastMenu() : dinnerMenu()}
-
 
             <button className="verify-order-btn" onClick={() => {
 
                 const filtered = orderProducts.filter((product) => {
-                    return product.qty > 0 ;
+                    return product.qty > 0;
                 });
 
                 if (filtered.length > 0) {

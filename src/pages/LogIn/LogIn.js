@@ -76,7 +76,7 @@ export const LogIn = ({ signInWithEmail }) => {
 
                 {errorCode !== "" ? <LoginError errorMsg={errorCode}></LoginError> : <br></br>}
 
-                <button type='submit'>Sign In</button>
+                <button type='submit' className="btn-signin">Sign In</button>
             </form>
             <Footer />
             <img src={leftBurger} alt="left side burger" className="left-burger burger"></img>

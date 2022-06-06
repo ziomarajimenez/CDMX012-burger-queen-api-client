@@ -40,17 +40,39 @@
 }
 
 .txt-message {
-    font-size: 2em;
+    font-size: 1.5em;
     font-style: normal;
     font-weight: bolder;
     padding-top: 1.5em;
     padding-bottom: 1em;
 }
 
+.button-wrapper{
+    margin-top: 5%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
 .order-delivered{
     display: flex;
     justify-content: space-around;
     font-weight: 590;
-    font-size: 1.5em;
-    width: 120px;
+    font-size: 1.2em;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.cancel-deliver{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 800;
+    font-size: 1.2em;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    background-color:#EBE8E8;
+    color: black;
 }
