@@ -1,10 +1,24 @@
 import ReactDOM from 'react-dom';
 import './ProfileModal.css';
-import profilepic from '../../assets/Profile-pic-placeholder.png';
 import logoutIcon from '../../assets/Log-out-icon.png';
+import chefIcon from '../../assets/chef-icon.png';
+import waiterIcon from '../../assets/waiter-red.png';
+import managerIcon from '../../assets/manager.png';
+import { useState, useEffect } from 'react';
 
+export default function ProfileModal({ open, onClose, user, logOut, role }) {
+    const [ pic, setPic ] = useState();
 
-export default function ProfileModal({ open, onClose, user, logOut }) {
+    useEffect(()=>{
+        if (role === 'Waiter') {
+            setPic(waiterIcon);
+        } else if (role === 'Manager') {
+            setPic(managerIcon);
+        } else if (role === 'Chef') {
+            setPic(chefIcon);
+        };
+    }, [role]);
+
     if (!open) return null;
 
     return ReactDOM.createPortal(
@@ -13,7 +27,7 @@ export default function ProfileModal({ open, onClose, user, logOut }) {
             <div className='modal profile-modal'>
                 <button className="close-modal" onClick={onClose}> X </button>
 
-                <img src={profilepic} alt="user's profile pic" className='profile-pic'></img>
+                <img src={pic} alt="user's profile pic" className='profile-pic'></img>
 
                 <div className='profile-txt'>
                     <p className='user-role'>{user.roles}</p>
