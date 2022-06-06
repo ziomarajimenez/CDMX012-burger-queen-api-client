@@ -3,6 +3,7 @@ import './ProfileModal.css';
 import profilepic from '../../assets/Profile-pic-placeholder.png';
 import logoutIcon from '../../assets/Log-out-icon.png';
 
+
 export default function ProfileModal({ open, onClose, user, logOut }) {
     if (!open) return null;
 
@@ -20,7 +21,6 @@ export default function ProfileModal({ open, onClose, user, logOut }) {
                     <p className='user-email'>{user.email}</p>
                 </div>
                 
-
                 <button onClick={()=>{logOut()}} className='log-out-btn'>
                     Log out
                     <img src={logoutIcon} alt='logout-icon' className='logout-icon'></img>

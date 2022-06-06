@@ -8,10 +8,11 @@ import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../lib/firebaseConfig';
 
+
 export const Header = () => {
     const navigate = useNavigate();
     const [ isOpen, setIsOpen ] = useState(false);
-    const [ userInf, setUserInf ] = useState('');
+    const [ userInf, setUserInf ] = useState();
 
     const user = currentUser();
 
