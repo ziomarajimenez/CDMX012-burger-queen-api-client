@@ -9,12 +9,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { currentUser } from '../lib/firebaseAuth';
 import { db } from '../lib/firebaseConfig';
 import { useState } from "react";
+import { ErrorPage } from "../pages/ErrorPage/ErrorPage";
 
 export const PrivateRoutes = () => {
     const [role, setRole] = useState('');
 
     const user = currentUser();
-    //console.log(user);
 
     const getUser = () => {
         const docRef = doc(db, "employees", user.uid);
@@ -37,6 +37,7 @@ export const PrivateRoutes = () => {
                 <Route path="/" element={<Mainscreen />} />
                 <Route path="/activeorders" element={<ActiveOrders />} />
                 <Route path="/verify-order" element={<VerifyOrder />} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         );
     } else if (role === 'Manager') {
@@ -44,13 +45,17 @@ export const PrivateRoutes = () => {
             <Routes>
                 <Route path="/" element={<AdminView />} />
                 <Route path="/chef" element={<ChefView />} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         );
     } else if (role === 'Chef') {
         return (
             <Routes>
                 <Route path="/" element={<ChefView />} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         );
     }
+
+
 }
