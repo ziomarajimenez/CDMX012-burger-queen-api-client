@@ -2,7 +2,7 @@ import { useState } from "react";
 import './ActiveChef.css';
 import { OrderPrepared } from "../OrderPrepared/OrderPrepared";
 
-export const ActiveChef = ({ orders }) => {
+export const ActiveChef = ({ orders, handleUpdate }) => {
     const [ isOpen, setIsOpen ] = useState(false)
 
     const sentOrders = orders?.filter(order => order.status === 'sent');
@@ -10,6 +10,7 @@ export const ActiveChef = ({ orders }) => {
     return (
         <>
             {sentOrders?.map((order, index) => {
+                console.log(order.id)
                 return (
                     <div className='wrapperOrder' key={order.id}>
                         <section className="top-order">
@@ -31,7 +32,12 @@ export const ActiveChef = ({ orders }) => {
                                 <button className='btn-ready' onClick={() => setIsOpen(true)}> Ready to serve </button>
                             </div>
                         </section>
-                        <OrderPrepared open={isOpen} onClose={() => setIsOpen(false)} id={order.id} dateEntry={order.dateEntry}/>
+                        <OrderPrepared open={isOpen} 
+                            onClose={() => setIsOpen(false)} 
+                            id={order.id} 
+                            dateEntry={order.dateEntry}
+                            handleUpdate={handleUpdate}
+                        />
                     </div>
                 );
             })}

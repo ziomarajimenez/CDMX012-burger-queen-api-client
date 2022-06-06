@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import './OrderPrepared.css';
 
-export const OrderPrepared = ({ open, onClose, id, dateEntry }) => {
+export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) => {
     if (!open) return null;
 
     const orderReady = () => {
@@ -23,6 +23,7 @@ export const OrderPrepared = ({ open, onClose, id, dateEntry }) => {
         fetch(idOrder, requestOptions)
             .then(response => response.json())
             .then(onClose)
+            .then(handleUpdate)
             .catch(res => console.log(res))
     };
 

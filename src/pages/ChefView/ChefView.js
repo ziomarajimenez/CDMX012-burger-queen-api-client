@@ -8,6 +8,7 @@ import { PreparedChef } from "../../components/PreparedChef/PreparedChef";
 export const ChefView = () => {
     const [view, setView] = useState('active');
     const [orders, setOrders] = useState();
+    const [updateOrders, setUpdate] = useState(0);
 
     useEffect(() => {
         fetch('http://localhost:3333/orders')
@@ -17,7 +18,11 @@ export const ChefView = () => {
             .then((orders) => {
                 setOrders(orders)
             })
-    }, []);
+    }, [updateOrders]);
+
+    const handleUpdate = () => {
+        setUpdate(updateOrders + 1);
+    };
 
     return (
 
@@ -45,7 +50,7 @@ export const ChefView = () => {
 
             </div>
             <section className="table-section">
-                {view === 'active' ? <ActiveChef orders={orders} /> : <PreparedChef orders={orders} />}
+                {view === 'active' ? <ActiveChef orders={orders} handleUpdate={handleUpdate}/> : <PreparedChef orders={orders}/>}
             </section>
             <Footer />
         </>
