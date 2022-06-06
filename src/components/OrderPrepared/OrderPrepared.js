@@ -3,6 +3,7 @@ import './OrderPrepared.css';
 
 export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) => {
     if (!open) return null;
+    console.log(id)
 
     const orderReady = () => {
         const dateProcessed = new Date().getTime();

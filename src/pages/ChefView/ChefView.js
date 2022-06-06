@@ -20,6 +20,8 @@ export const ChefView = () => {
             })
     }, [updateOrders]);
 
+    const sentOrders = orders?.filter(order => order.status === 'sent');
+
     const handleUpdate = () => {
         setUpdate(updateOrders + 1);
     };
@@ -50,7 +52,12 @@ export const ChefView = () => {
 
             </div>
             <section className="table-section">
-                {view === 'active' ? <ActiveChef orders={orders} handleUpdate={handleUpdate}/> : <PreparedChef orders={orders}/>}
+                {view === 'active' ? sentOrders?.map((order, index) => <ActiveChef 
+                    order={order} 
+                    index={index} 
+                    handleUpdate={handleUpdate} 
+                    key={order.id}/>) 
+                : <PreparedChef orders={orders}/>}
             </section>
             <Footer />
         </>

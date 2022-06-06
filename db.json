@@ -314,8 +314,8 @@
       ],
       "status": "ready",
       "dateEntry": 1654539076039,
-      "dateProcessed": 1654539127957,
-      "time": "1"
+      "dateProcessed": 1654557112967,
+      "time": "301"
     },
     {
       "id": 12,
@@ -340,7 +340,69 @@
       ],
       "status": "ready",
       "dateEntry": 1654539087797,
-      "dateProcessed": 1654539103936,
+      "dateProcessed": 1654557128740,
+      "time": "301"
+    },
+    {
+      "id": 13,
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "13",
+      "products": [
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 4
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654557164313,
+      "dateProcessed": ""
+    },
+    {
+      "id": 14,
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "14",
+      "products": [
+        {
+          "product": "Natural juice",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654557175091,
+      "dateProcessed": 1654557212376,
+      "time": "1"
+    },
+    {
+      "id": 15,
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "15",
+      "products": [
+        {
+          "product": "Water 750 ml",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "product": "Soda 750 ml",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "product": "Basic burger",
+          "price": 10,
+          "qty": 3
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654557190183,
+      "dateProcessed": 1654557208033,
       "time": "0"
     }
   ],
