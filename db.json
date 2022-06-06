@@ -158,9 +158,9 @@
           "qty": 1
         }
       ],
-      "status": "sent",
+      "status": "ready",
       "dateEntry": 1654388156575,
-      "dateProcessed": ""
+      "dateProcessed": 1654530271517
     },
     {
       "id": "4",
@@ -178,9 +178,181 @@
           "qty": 1
         }
       ],
-      "status": "sent",
+      "status": "ready",
       "dateEntry": 1654459887375,
-      "dateProcessed": ""
+      "dateProcessed": 1654529602677
+    },
+    {
+      "id": "41",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "37",
+      "products": [
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 2
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654529737626,
+      "dateProcessed": 1654529797068
+    },
+    {
+      "id": "411",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "79",
+      "products": [
+        {
+          "product": "Water 750 ml",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "product": "Soda 750 ml",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "product": "Basic burger",
+          "price": 10,
+          "qty": 4
+        },
+        {
+          "product": "French fries",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654529830723,
+      "dateProcessed": 1654529894002
+    },
+    {
+      "id": "4111",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "",
+      "products": [
+        {
+          "product": "Water 750 ml",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Soda 500 ml",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "product": "Basic burger",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "product": "Double burger",
+          "price": 15,
+          "qty": 1
+        },
+        {
+          "product": "French fries",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654530657505,
+      "dateProcessed": 1654530724909
+    },
+    {
+      "id": "41111",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "12",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654530800083,
+      "dateProcessed": 1654530929770
+    },
+    {
+      "id": "411111",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "21",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654530818046,
+      "dateProcessed": 1654530886343
+    },
+    {
+      "id": "4111111",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "56",
+      "products": [
+        {
+          "product": "Water 750 ml",
+          "price": 7,
+          "qty": 3
+        },
+        {
+          "product": "Basic burger",
+          "price": 10,
+          "qty": 3
+        },
+        {
+          "product": "French fries",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654531205642,
+      "dateProcessed": 1654531273936,
+      "time": "1"
+    },
+    {
+      "id": "41111111",
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "23",
+      "products": [
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 4
+        }
+      ],
+      "status": "ready",
+      "dateEntry": 1654531217577,
+      "dateProcessed": 1654531246120,
+      "time": "0"
     }
   ],
   "users": [

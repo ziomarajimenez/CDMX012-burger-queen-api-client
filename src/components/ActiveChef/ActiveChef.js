@@ -6,7 +6,6 @@ export const ActiveChef = ({ orders }) => {
     const [ isOpen, setIsOpen ] = useState(false)
 
     const sentOrders = orders?.filter(order => order.status === 'sent');
-    //console.log(sentOrders)
 
     return (
         <>
@@ -32,7 +31,7 @@ export const ActiveChef = ({ orders }) => {
                                 <button className='btn-ready' onClick={() => setIsOpen(true)}> Ready to serve </button>
                             </div>
                         </section>
-                        <OrderPrepared open={isOpen} onClose={() => setIsOpen(false)} id={order.id} />
+                        <OrderPrepared open={isOpen} onClose={() => setIsOpen(false)} id={order.id} dateEntry={order.dateEntry}/>
                     </div>
                 );
             })}
