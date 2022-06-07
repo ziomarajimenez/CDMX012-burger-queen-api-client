@@ -1,4 +1,22 @@
 h1{
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bolder;
+    margin: 0.4em;
+}
+
+.activeTables {
+    overflow: scroll;
+    width: 80%;
+    height: 65%;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+    /* grid-template-columns: repeat(2, 40%); */
+    /* grid-template-columns: 40%; */
+    grid-template-columns: repeat(auto-fit, 40%);
+    grid-auto-flow: row;
+    grid-auto-rows: 25%;
+    grid-auto-columns: 40%;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
