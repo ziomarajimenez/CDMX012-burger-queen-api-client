@@ -74,7 +74,7 @@ export const VerifyOrder = () => {
         <div className="verify-order-container">
             <Header />
 
-            <button className="go-back" onClick={() => modifyOrder()}>
+            <button className="go-back-order" onClick={() => modifyOrder()}>
                 <img src={arrow} alt="go back arrow" className="arrow"></img>
             </button>
 

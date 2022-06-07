@@ -33,7 +33,9 @@ export const ActiveOrders = () => {
         <>
             <Header />
             <h1>Active orders</h1>
-            {orders.length !== 0 ? getTableNumber() : null}
+            <section className='activeTables'>
+                {orders.length !== 0 ? getTableNumber() : null}
+            </section>
             <Footer />
         </>
     )
