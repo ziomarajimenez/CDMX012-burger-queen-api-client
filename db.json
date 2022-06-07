@@ -433,6 +433,51 @@
       "password": "test1234",
       "roles": "Manager",
       "admin": true
+    },
+    {
+      "id": "gNZHjBPoWQT4j5LyuTVLONG1pnf1",
+      "name": "Karen",
+      "lastName": "Doe",
+      "email": "karen_doe@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "AQSAwp2XKnYHa5GklSe3sT7ysTq2",
+      "name": "Andrea",
+      "lastName": "Gutiérrez",
+      "email": "andy_gtz@outlook.com",
+      "password": "test1234",
+      "roles": "Chef",
+      "admin": false
+    },
+    {
+      "id": "FsAPa3BHxFdpwA3oMRYUIxy8oHq2",
+      "name": "Jennifer",
+      "lastName": "Benítez",
+      "email": "jenniferb123@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "Ai15TSNVN9OmNmsXy2F4aKXcwZb2",
+      "name": "Paloma",
+      "lastName": "Luna",
+      "email": "lunapaloma1@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
+    },
+    {
+      "id": "kQEVYDrjyycz4Ge4ZVmXFFKiTPu2",
+      "name": "Luisa",
+      "lastName": "Lane",
+      "email": "lluisa@hotmail.com",
+      "password": "test1234",
+      "roles": "Waiter",
+      "admin": false
     }
   ]
 }
