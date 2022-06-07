@@ -45,7 +45,7 @@ export const LogIn = ({ signInWithEmail }) => {
             <img src={rightBurger} alt="right side burger" className="right-burger burger"></img>
             <form onSubmit={handleSubmit} className='acc-form'>
                 <img src={logo} alt="burger queen logo" className="bq-logo"></img>
-                <h1>Welcome back!</h1>
+                <h2>Welcome back!</h2>
 
                 <label htmlFor='email' id="emailLabel">E-mail</label>
 
