@@ -35,7 +35,7 @@ export const Header = () => {
     
     return (
         <header className='header'>
-            <img src={logo} alt="burger queen logo" className='bq-logo-header'></img>
+            <img src={logo} alt="burger queen logo" className='bq-logo-header' onClick={() => navigate('/')}></img>
 
             {userRole  === 'Waiter' ? 
                 <img src={purchaseIcon} alt="purchase icon" className='icon' id="purchaseIcon" onClick={() => navigate('/activeorders')}></img> 

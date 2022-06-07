@@ -37,11 +37,13 @@
     height: 2.2em;
     border-radius: 0.7em;
     font-family: 'Poppins', sans-serif;
-    color: var(--darker-gray);
+    /* color: var(--darker-gray); */
     padding-left: 0.7em;
     width: 100%;
     margin-bottom: 0.4em;
+    font-weight: 580;
 }
+
 
 .new-employe-btn{
     align-self: center;

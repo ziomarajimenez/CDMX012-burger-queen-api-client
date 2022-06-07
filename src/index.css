@@ -63,17 +63,19 @@ code {
 
 .bq-logo-header {
   margin-right: auto;
-  padding-left: 1em;
+  padding-left: 3.5em;
   align-self: normal;
+  cursor: pointer;
 }
 
 .icon {
-  padding-right: 1.2rem;
+  padding-right: 3.5em;
   height: 55%;
   cursor: pointer;
 }
 
 #purchaseIcon{
-  height: 70%
+  height: 70%;
+  padding-right: 2em;
 }
 

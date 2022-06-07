@@ -1,10 +1,22 @@
+.chef-order-title{
+    font-size: 2.5em;
+}
+
 .selection-buttons {
     display: flex;
 }
 
 .active-btn, .prepared-btn {
-    border-radius: 5%;
     margin: 1rem 0;
+    font-size: 1.1em;
+}
+
+.active-btn{
+    border-radius: 10px 0 0 10px ;
+}
+
+.prepared-btn{
+    border-radius: 0 10px 10px 0;
 }
 
 .table-section{

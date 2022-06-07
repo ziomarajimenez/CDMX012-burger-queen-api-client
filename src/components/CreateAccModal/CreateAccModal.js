@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import { useState } from 'react';
 import badge from '../../assets/Badge.png';
 
-export const CreateAccModal = ({open, onClose, saveInformation, initialValues, titleText, buttonText}) => {
+export const CreateAccModal = ({ open, onClose, saveInformation, initialValues, titleText, buttonText }) => {
     const [values, setValues] = useState(initialValues)
-    const [ password, setPassword ] = useState(initialValues.password);
-    const [ passwordConf, setPasswordConf ] = useState(initialValues.password);
+    const [password, setPassword] = useState(initialValues.password);
+    const [passwordConf, setPasswordConf] = useState(initialValues.password);
 
     if (!open) return null;
 
@@ -103,7 +103,7 @@ export const CreateAccModal = ({open, onClose, saveInformation, initialValues, t
 
                     <label htmlFor='role'>Role</label>
                     <select name='role' value={values.role} onChange={handleChange}>
-                        <option value='Waiter'>Waiter</option>
+                        <option value='Waiter' selected>Waiter</option>
                         <option value='Chef'>Chef</option>
                         <option value='Manager'>Manager</option>
                     </select>
