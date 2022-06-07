@@ -8,7 +8,6 @@ import { Menu } from "../../components/Menus/Menus";
 import { ErrorModal } from "../../components/ErrorModal/ErrorModal";
 
 export const Orders = () => {
-
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -70,7 +69,6 @@ export const Orders = () => {
         <>
             <Header />
             <section className="top-orders">
-                {/* <h1>Orders</h1> */}
                 <div className="menuButtons">
                     <button className='breakfastBtn' onClick={() => setMenu('breakfast')}>Breakfast</button>
                     <button className='dinnerBtn' onClick={() => setMenu('dinner')}>Dinner</button>
