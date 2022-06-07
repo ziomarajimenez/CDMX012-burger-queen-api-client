@@ -22,12 +22,13 @@
 }
 
 .cancel-delete{
-    color: black;
+    color: var(--darker-gray);
     font-weight: 800;
     width: 180px;
     height: 40px;
     background-color:#EBE8E8;
     border-radius: 10px;
+    border: 1.75px solid var(--darker-gray);
 }
 
 .confirm-delete{
