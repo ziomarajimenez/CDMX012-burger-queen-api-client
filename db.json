@@ -374,10 +374,9 @@
           "qty": 1
         }
       ],
-      "status": "ready",
+      "status": "sent",
       "dateEntry": 1654557175091,
-      "dateProcessed": 1654557212376,
-      "time": "1"
+      "dateProcessed": ""
     },
     {
       "id": 15,
@@ -400,10 +399,9 @@
           "qty": 3
         }
       ],
-      "status": "ready",
+      "status": "sent",
       "dateEntry": 1654557190183,
-      "dateProcessed": 1654557208033,
-      "time": "0"
+      "dateProcessed": ""
     }
   ],
   "users": [

@@ -6,13 +6,9 @@
 }
 
 .btn-ready{
-    width: 30%;
+    width: 22%;
     height: 7%;
     border-radius: 10px;
-    background-color: rgba(94, 93, 93, 0.6);
-    border-color: rgba(94, 93, 93, 0.6);
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: bolder;
 }
 
 .product-order{

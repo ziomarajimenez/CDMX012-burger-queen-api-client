@@ -31,7 +31,7 @@ export const ChefView = () => {
         <>
             <Header />
             <div className="top-buttons">
-                <h1>Orders</h1>
+                <h1 className="chef-order-title">Orders</h1>
                 <div className="selection-buttons">
                     <button type="button" className="active-btn" onClick={() => setView('active')}>Active</button>
                     <button type="button" className="prepared-btn" onClick={() => setView('prepared')}>Prepared</button>

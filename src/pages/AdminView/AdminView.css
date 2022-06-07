@@ -19,7 +19,6 @@
     width: 80%;
     overflow-y: auto;
     background-color: var(--light-gray);
-
 }
 
 .selection-buttons {
@@ -28,8 +27,15 @@
 }
 
 .employees-btn, .products-btn {
-    border-radius: 5%;
     margin: 1rem 0;
-    border-radius: 5px;
     height: 35px;
+    font-size: 1.1em;
+}
+
+.employees-btn{
+    border-radius: 10px 0 0 10px ;
+}
+
+.products-btn{
+    border-radius: 0 10px 10px 0;
 }
