@@ -2,13 +2,15 @@ import { Header } from "../../components/Header/header";
 import { Footer } from "../../components/Footer/footer";
 import './ChefView.css';
 import { useState, useEffect } from "react";
-import { ActiveChef } from "../../components/ActiveChef/ActiveChef"
+import { ActiveChef } from "../../components/ActiveChef/ActiveChef";
 import { PreparedChef } from "../../components/PreparedChef/PreparedChef";
+import loading from '../../assets/loading.gif';
 
 export const ChefView = () => {
     const [view, setView] = useState('active');
     const [orders, setOrders] = useState();
     const [updateOrders, setUpdate] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:3333/orders')
@@ -17,6 +19,7 @@ export const ChefView = () => {
             })
             .then((orders) => {
                 setOrders(orders.reverse())
+                setIsLoading(false);
             })
     }, [updateOrders]);
 
@@ -25,6 +28,15 @@ export const ChefView = () => {
     const handleUpdate = () => {
         setUpdate(updateOrders + 1);
     };
+
+    if (isLoading === true) {
+        return (
+            <>
+            <img src={loading} alt="loading icon"></img>
+            <h1>Loading...</h1>
+            </>
+        )
+    }
 
     return (
 
