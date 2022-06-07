@@ -18,11 +18,15 @@
 .product-order{
     display:flex;
     flex-direction: column;
-    margin: 0.2% 3%;
+    margin: 0.2% 5%;
 }
 
 .wrapper-btn{
     display: flex;
     justify-content: flex-end;
     margin: 0.2% 5% 4%;
+}
+
+.active-bottom-order {
+    font-size: 1.15rem;
 }

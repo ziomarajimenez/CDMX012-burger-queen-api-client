@@ -54,7 +54,7 @@ export const VerifyOrder = () => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                id: lastOrder.id + 1,
+                id: lastOrder ? lastOrder.id + 1 : 1,
                 userId: currentUser().uid,
                 table: order.client,
                 products: filtered,

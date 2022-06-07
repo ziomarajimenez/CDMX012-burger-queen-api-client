@@ -1,15 +1,21 @@
 import ReactDOM from 'react-dom';
 import './OrderPrepared.css';
 
-export const OrderPrepared = ({ open, onClose, id }) => {
+export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) => {
     if (!open) return null;
+    console.log(id)
 
     const orderReady = () => {
+        const dateProcessed = new Date().getTime();
+        const time = ((dateProcessed - dateEntry)/60000).toFixed()
+
         const requestOptions = {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 status: 'ready',
+                dateProcessed: dateProcessed,
+                time: time
             })
         };
         let idOrder = 'http://localhost:3333/orders/' + id;
@@ -18,6 +24,7 @@ export const OrderPrepared = ({ open, onClose, id }) => {
         fetch(idOrder, requestOptions)
             .then(response => response.json())
             .then(onClose)
+            .then(handleUpdate)
             .catch(res => console.log(res))
     };
 

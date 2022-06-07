@@ -2,22 +2,17 @@ import { useState } from "react";
 import './ActiveChef.css';
 import { OrderPrepared } from "../OrderPrepared/OrderPrepared";
 
-export const ActiveChef = ({ orders }) => {
+export const ActiveChef = ({ order, index, handleUpdate }) => {
     const [ isOpen, setIsOpen ] = useState(false)
-
-    const sentOrders = orders?.filter(order => order.status === 'sent');
-    //console.log(sentOrders)
-
+    
     return (
         <>
-            {sentOrders?.map((order, index) => {
-                return (
                     <div className='wrapperOrder' key={order.id}>
                         <section className="top-order">
                             <h3>Table {order.table} </h3>
                             <h3>Recieved {new Date(order.dateEntry).toLocaleString({ timeZone: 'America/Mexico_City' })} </h3>
                         </section>
-                        <section className="bottom-order">
+                        <section className="active-bottom-order">
                             <div key={index} className='product-order'>
                                 {order.products.map((product, indexProduct) => {
                                     return (
@@ -32,10 +27,13 @@ export const ActiveChef = ({ orders }) => {
                                 <button className='btn-ready' onClick={() => setIsOpen(true)}> Ready to serve </button>
                             </div>
                         </section>
-                        <OrderPrepared open={isOpen} onClose={() => setIsOpen(false)} id={order.id} />
+                        <OrderPrepared open={isOpen} 
+                            onClose={() => setIsOpen(false)} 
+                            id={order.id} 
+                            dateEntry={order.dateEntry}
+                            handleUpdate={handleUpdate}
+                        />
                     </div>
-                );
-            })}
         </>
     );
 }

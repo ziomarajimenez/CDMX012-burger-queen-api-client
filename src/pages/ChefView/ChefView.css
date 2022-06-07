@@ -1,6 +1,10 @@
-
-.selection-buttons{
+.selection-buttons {
     display: flex;
+}
+
+.active-btn, .prepared-btn {
+    border-radius: 5%;
+    margin: 1rem 0;
 }
 
 .table-section{

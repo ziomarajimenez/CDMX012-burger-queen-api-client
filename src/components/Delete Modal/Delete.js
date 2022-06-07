@@ -5,7 +5,7 @@ import './Delete.css';
 export const Delete = ({ open, onClose, id, handleUpdate, section }) => {
 
     if (!open) return null;
-
+    console.log(id)
 
     const deleteEmployee = () => {
         let userId = 'http://localhost:3333/users/' + id;

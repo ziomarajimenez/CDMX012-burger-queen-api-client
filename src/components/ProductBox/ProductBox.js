@@ -23,7 +23,6 @@ export const ProductBox = (props) => {
 
     const increment = () => {
         const newQuantity = quantity + 1;
-        //console.log(newQuantity);
         setQuantity(newQuantity);
         changeProductQuantity(newQuantity);
     }
@@ -44,7 +43,8 @@ export const ProductBox = (props) => {
             <p className='product'>{props.product}</p>
             <div className='quantityContainer'>
                 <button className='setQuantity' onClick={() => decrement()}>-</button>
-                <input className='quantity' type='number' onChange={handleQuantity} value={quantity}></input>
+                <input className='quantity' id='quantityInput' type='number' onChange={handleQuantity} value={quantity}></input>
+                {changeProductQuantity(quantity)}
                 <button className='setQuantity' onClick={() => increment()}>+</button>
             </div>
         </div >
