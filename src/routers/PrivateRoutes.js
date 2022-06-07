@@ -44,7 +44,6 @@ export const PrivateRoutes = () => {
         return (
             <Routes>
                 <Route path="/" element={<AdminView />} />
-                <Route path="/chef" element={<ChefView />} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         );

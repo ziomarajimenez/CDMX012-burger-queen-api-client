@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 import './ProfileModal.css';
-import logoutIcon from '../../assets/Log-out-icon.png';
 import chefIcon from '../../assets/chef-icon.png';
 import waiterIcon from '../../assets/waiter-red.png';
 import managerIcon from '../../assets/manager.png';
@@ -37,7 +36,6 @@ export default function ProfileModal({ open, onClose, user, logOut, role }) {
                 
                 <button onClick={()=>{logOut()}} className='log-out-btn'>
                     Log out
-                    <img src={logoutIcon} alt='logout-icon' className='logout-icon'></img>
                 </button>
             </div>
         </>,
