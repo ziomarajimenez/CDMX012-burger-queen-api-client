@@ -18,7 +18,7 @@
 .cancel-ready{
     background-color: #EBE8E8;
     color: black;
-    border: 1.75px solid var(--main-color);
+    border: 1.75px solid var(--darker-gray);
     border-radius: 10px;
     
 }

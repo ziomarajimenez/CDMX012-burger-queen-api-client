@@ -1,6 +1,7 @@
 #modifyOption:focus option:first-of-type {
     display: none;
 }
+
 #modifyOption {
     width: 21px;
     border-radius: 2px;
@@ -8,9 +9,9 @@
     color: #F44341;
 }
 
-option{
+option {
     color: #817C7C;
-    border-radius: 3px;
+    border-radius: 10px;
     font-family: Poppins;
-    font-weight: 600;
+    font-weight: 580;
 }

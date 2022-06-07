@@ -17,7 +17,7 @@ export const ActiveChef = ({ order, index, handleUpdate }) => {
                                 {order.products.map((product, indexProduct) => {
                                     return (
                                         <div key={indexProduct} className='each-product'>
-                                            <span className='qty'> ({product.qty})</span>
+                                            <span className='qty'> ( {product.qty} )</span>
                                             <span className="prod-name"> {product.product} </span>
                                         </div>
                                     );
