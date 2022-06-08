@@ -8,6 +8,7 @@ table {
     height: 100%;
     border-collapse: collapse;
     background-color: var(--light-gray);
+    font-size: 1.1em;
 }
 
 table td + td { 

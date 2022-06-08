@@ -71,4 +71,18 @@ button {
 
 .btn-signin{
     margin-top: 2%;
+    width: 40%;
+    font-size: 1.15em;
+}
+
+#emailLabel{
+    font-size: 1.1em;
+}
+
+#passLabel{
+    font-size: 1.1rem;
+}
+
+.acc-form input {
+    font-size: 1rem;
 }

@@ -28,7 +28,7 @@ export const AddProduct = ({open, onClose, handleUpdateProd}) => {
         };
         fetch('http://localhost:3333/products', requestOptions)
             .then(response => {
-                console.log('saved');
+                //console.log('saved');
                 response.json();
                 handleUpdateProd();
                 setValues(defaultValues);
