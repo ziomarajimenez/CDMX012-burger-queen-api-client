@@ -21,4 +21,9 @@
 # 6. Deployed project
 
 # 7. Authors
-
+| Developers | Contact |
+| ------------- | ------------- |
+| Perla Del Ángel | [![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/perdelangel/)
+&nbsp;
+[![GitHub](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/PerlaDelAngel)  |
+| Ziomara Jiménez | Contenido de la celda  |
