@@ -165,14 +165,39 @@
       "time": "6"
     },
     {
-      "id": 6,
+      "id": 8,
       "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
-      "table": "14",
+      "table": "6",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 2
+        },
+        {
+          "product": "Natural juice",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 2
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654700601984,
+      "dateProcessed": ""
+    },
+    {
+      "id": 9,
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "10",
       "products": [
         {
           "product": "Natural juice",
           "price": 7,
-          "qty": 2
+          "qty": 1
         },
         {
           "product": "Ham and cheese sandwich",
@@ -180,35 +205,30 @@
           "qty": 1
         }
       ],
-      "status": "sent",
-      "dateEntry": 1654557175091,
-      "dateProcessed": ""
+      "status": "ready",
+      "dateEntry": 1654701786873,
+      "dateProcessed": 1654704896826,
+      "time": "52"
     },
     {
-      "id": 7,
+      "id": 10,
       "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
-      "table": "15",
+      "table": "2",
       "products": [
         {
           "product": "Water 750 ml",
           "price": 7,
-          "qty": 2
-        },
-        {
-          "product": "Soda 750 ml",
-          "price": 10,
           "qty": 1
         },
         {
           "product": "Basic burger",
           "price": 10,
-          "qty": 3
+          "qty": 2
         }
       ],
       "status": "sent",
-      "dateEntry": 1654557190183,
-      "dateProcessed": 1654660321073,
-      "time": "1719"
+      "dateEntry": 1654705055783,
+      "dateProcessed": ""
     }
   ],
   "users": [
@@ -280,15 +300,6 @@
       "name": "Luisa",
       "lastName": "Lane",
       "email": "lluisa@hotmail.com",
-      "password": "test1234",
-      "roles": "Waiter",
-      "admin": false
-    },
-    {
-      "id": "Bt6VTH519CeitNS0BAbz431dQ1g1",
-      "name": "Angelica",
-      "lastName": "Grajales",
-      "email": "angiegraj@gmail.com",
       "password": "test1234",
       "roles": "Waiter",
       "admin": false
