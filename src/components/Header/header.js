@@ -1,7 +1,7 @@
 import logo from '../../assets/BQ logo sin fondo.png'
 import purchaseIcon from '../../assets/purchaseicon.png';
 /* import profileIcon from '../../assets/Profile.png'; */
-import logOutIcon from '../../assets/log-out-icon.png';
+import logOutIcon from '../../assets/Log-out-icon.png';
 import ProfileModal from '../ProfileModal/ProfileModal';
 import { useState, useEffect } from 'react';
 import { currentUser, logOut } from '../../lib/firebaseAuth';

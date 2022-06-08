@@ -44,7 +44,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate }) => {
 
         createAccWithEmail(values.email, values.password)
             .then(() => {
-                console.log('saveFirestore')
+                //console.log('saveFirestore')
                 //saveFirestore();
 
                 errorArea.innerText = '';

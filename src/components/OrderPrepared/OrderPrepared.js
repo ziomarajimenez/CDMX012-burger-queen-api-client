@@ -19,7 +19,7 @@ export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) =>
             })
         };
         let idOrder = 'http://localhost:3333/orders/' + id;
-        console.log(idOrder);
+        //console.log(idOrder);
 
         fetch(idOrder, requestOptions)
             .then(response => response.json())

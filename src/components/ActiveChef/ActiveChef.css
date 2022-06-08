@@ -20,9 +20,17 @@
 .wrapper-btn{
     display: flex;
     justify-content: flex-end;
-    margin: 0.2% 5% 4%;
+    margin-top: 0.2%;
+    margin-right: 4%;
+    margin-bottom: 1%;
 }
 
 .active-bottom-order {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+}
+
+.wrapperOrder{
+    padding-bottom: 1em;
+    border-bottom: 0.5px solid rgb(0, 0, 0, 0.2);
+    
 }

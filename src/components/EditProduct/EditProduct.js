@@ -27,7 +27,7 @@ export const EditProduct = ({open, onClose, idProd, name, price, type, menu, han
         
         fetch(productToEdit, requestOptions)
             .then(response => {
-                console.log('product edited');
+                //console.log('product edited');
                 response.json();
                 onClose();
                 handleUpdateProd();
