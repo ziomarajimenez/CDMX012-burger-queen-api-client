@@ -14,7 +14,7 @@ const DeliveredModal = ({ open, onClose, id, accept }) => {
                 status: 'delivered',
             })
         };
-        let idOrder = 'http://localhost:3333/orders/' + id;
+        let idOrder = 'https://62a22b92cd2e8da9b003f634.mockapi.io/orders/' + id;
         console.log(idOrder);
 
         fetch(idOrder, requestOptions)

@@ -13,7 +13,7 @@ export const EditEmployee = ({open, onClose, employee, handleUpdate}) => {
 
     const saveInformation = (values) => {
 
-        const userId = 'http://localhost:3333/users/' + employee.id;
+        const userId = 'https://62a22b92cd2e8da9b003f634.mockapi.io/users/' + employee.id;
 
         const requestOptions = {
             method: 'PUT',

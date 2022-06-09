@@ -8,7 +8,7 @@ export const AddProductModal = ({ open, onClose, defaultValues, saveInfo, titleT
     const [lastProduct, setlastProduct] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3333/products')
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/products')
             .then((response) => {
                 return response.json()
             })

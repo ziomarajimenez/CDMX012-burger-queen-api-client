@@ -11,7 +11,7 @@ export const EditProduct = ({open, onClose, idProd, name, price, type, menu, han
     };
 
     const saveInformation = (values) => {
-        const productToEdit = 'http://localhost:3333/products/' + idProd;
+        const productToEdit = 'https://62a22b92cd2e8da9b003f634.mockapi.io/products/' + idProd;
 
         const requestOptions = {
             method: 'PUT',

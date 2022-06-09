@@ -29,7 +29,7 @@ export const CreateAcc = ({ open, onClose, handleUpdate }) => {
                 admin: values.role === 'Manager' ? true : false
             })
         };
-        fetch('http://localhost:3333/users', requestOptions)
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/users', requestOptions)
             .then(response => {
                 response.json();
                 handleUpdate();

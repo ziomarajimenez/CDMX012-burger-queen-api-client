@@ -7,7 +7,7 @@ export const Delete = ({ open, onClose, id, handleUpdate, section }) => {
     //console.log(id)
 
     const deleteEmployee = () => {
-        let userId = 'http://localhost:3333/users/' + id;
+        let userId = 'https://62a22b92cd2e8da9b003f634.mockapi.io/users/' + id;
 
         fetch(userId, { method: 'DELETE' })
             .then(response => response.json())
@@ -18,9 +18,9 @@ export const Delete = ({ open, onClose, id, handleUpdate, section }) => {
     }
 
     const deleteProduct = () => {
-        let userId = 'http://localhost:3333/products/' + id;
+        let productId = 'https://62a22b92cd2e8da9b003f634.mockapi.io/products/' + id;
 
-        fetch(userId, { method: 'DELETE' })
+        fetch(productId, { method: 'DELETE' })
             .then(response => response.json())
             .then(onClose)
             .then(handleUpdate)
