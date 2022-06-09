@@ -19,12 +19,14 @@
 # 5. Usability tests
 During the development, three usability tests were made and, based on these, the project was adapted to be more user-friendly.
 
-1. User Story 1
+### 1. User Story 1
+
 Testing that the user is able to log in with email and password, can understand the error messages, and correct their mistakes.
+
 - Users wanted to see more descriptive error messages (e. g., what was causing the error, what could you do to fix it).
 - Change of color from the error messages, from black to red.
 
-2. User Story 2 and 4
+### 2. User Story 2 and 4
 
 Testing:
 - The user can annotate the table’s number.
@@ -39,7 +41,7 @@ Feedback:
 - In the order summary, users wanted to see a description of said order (quantity, product and price).
 - Bigger letter size in 'Verify order' screen.
 
-3. User Story 3, 5 and 6
+### 3. User Story 3, 5 and 6
 
 Testing:
 - The user can mark an order ready to serve.
