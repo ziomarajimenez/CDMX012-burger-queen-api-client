@@ -1,5 +1,5 @@
 <div align="center">
-# Burger Queen Api Client
+  <h1> Burger Queen Api Client </h1>
 </div>
 
 ## Contents
