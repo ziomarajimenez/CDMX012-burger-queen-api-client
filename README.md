@@ -1,8 +1,9 @@
 <div align="center">
   <h1> Burger Queen Api Client </h1>
-  ![Burger Queen Logo](./src/assets/burger%20queen%20logo%20fondo%20blanco.png)
-</div>
 
+  ![Burger Queen Logo](./src/assets/burger%20queen%20logo%20fondo%20blanco.png)
+
+</div>
 ## Contents
 
 * [1. Project description](#1-project-description)
@@ -42,7 +43,9 @@ Our application is designed to be used on tablet devices, that's why we approach
 In order to complete this project, the following user stories were solved:
 
 <div align="center">
-    ![user-stories](https://github.com/ziomarajimenez/CDMX012-burger-queen-api-client/blob/main/src/assets/user-stories.PNG)
+
+![user-stories](https://github.com/ziomarajimenez/CDMX012-burger-queen-api-client/blob/main/src/assets/user-stories.PNG)
+
 </div>
 
 
