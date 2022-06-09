@@ -42,8 +42,9 @@ Our application is designed to be used on tablet devices, that's why we approach
 In order to complete this project, the following user stories were solved:
 
 <div align="center">
-  ![user-stories](https://github.com/ziomarajimenez/CDMX012-burger-queen-api-client/blob/main/src/assets/user-stories.PNG)
- </div>
+    ![user-stories](https://github.com/ziomarajimenez/CDMX012-burger-queen-api-client/blob/main/src/assets/user-stories.PNG)
+</div>
+
 
 ## 4. High fidelity prototypes
 
