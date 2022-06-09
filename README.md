@@ -45,6 +45,7 @@ In order to complete this project, the following user stories were solved:
     ![user-stories](https://github.com/ziomarajimenez/CDMX012-burger-queen-api-client/blob/main/src/assets/user-stories.PNG)
 </div>
 
+
 ## 4. High fidelity prototypes
 
 Having the user stories in mind, we created high fidelity prototypes in which we wanted to portray an easy to understand interface and provide our users an optimal work flow. This prototypes were key to develop the project.
