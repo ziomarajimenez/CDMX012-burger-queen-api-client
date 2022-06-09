@@ -21,8 +21,11 @@ During the development, three usability tests were made and, based on these, the
 
 ## 5.1 User Story 1
 
-Testing that the user is able to log in with email and password, can understand the error messages, and correct their mistakes.
+Testing: 
+- The user is able to log in with email and password.
+- The user can understand the error messages, and correct their mistakes.
 
+Feedback:
 - Users wanted to see more descriptive error messages (e. g., what was causing the error, what could you do to fix it).
 - Change of color from the error messages, from black to red.
 
