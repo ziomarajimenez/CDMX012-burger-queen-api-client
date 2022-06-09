@@ -19,14 +19,14 @@
 # 5. Usability tests
 During the development, three usability tests were made and, based on these, the project was adapted to be more user-friendly.
 
-### 1. User Story 1
+## 5.1 User Story 1
 
 Testing that the user is able to log in with email and password, can understand the error messages, and correct their mistakes.
 
 - Users wanted to see more descriptive error messages (e. g., what was causing the error, what could you do to fix it).
 - Change of color from the error messages, from black to red.
 
-### 2. User Story 2 and 4
+## 5.2 User Story 2 and 4
 
 Testing:
 - The user can annotate the table’s number.
@@ -41,7 +41,7 @@ Feedback:
 - In the order summary, users wanted to see a description of said order (quantity, product and price).
 - Bigger letter size in 'Verify order' screen.
 
-### 3. User Story 3, 5 and 6
+## 5.3 User Story 3, 5 and 6
 
 Testing:
 - The user can mark an order ready to serve.
@@ -53,8 +53,35 @@ Testing:
 
 Feedback:
 - Placeholders on forms can be confusing to the user.
+- Users expect to be able to edit their profile when clicking on the profile logo, not just to log out.
 
 # 6. Deployed project
+
+## 6.1 Log in screen
+
+![Log in](./src/assets/LogInView.png)
+
+## 6.2 Waiter screens
+
+![Waiter main screen](./src/assets/WaiterFirstView.png)
+
+![Waiter order screen](./src/assets/WaiterOrderView.png)
+
+![Waiter verify order screen](./src/assets/WaiterVerifyOrder.png)
+
+![Waiter active orders screen](./src/assets/WaiterActiveOrders.png)
+
+## 6.3 Chef screens
+
+![Chef orders screen](./src/assets/ChefOrders.png)
+
+![Chef prepared orders screen](./src/assets/ChefPrepared.png)
+
+## 6.4 Administrator screens
+
+![Admin employees screen](./src/assets/AdminEmployees.png)
+
+![Admin products screen](./src/assets/AdminProducts.png)
 
 
 # 7. Authors

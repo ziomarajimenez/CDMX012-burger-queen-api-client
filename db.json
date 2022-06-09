@@ -229,6 +229,26 @@
       "status": "sent",
       "dateEntry": 1654705055783,
       "dateProcessed": ""
+    },
+    {
+      "id": 11,
+      "userId": "IboZ8r9TvhPK4kqf8APP9lpOK8i1",
+      "table": "5",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Ham and cheese sandwich",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "status": "sent",
+      "dateEntry": 1654749957129,
+      "dateProcessed": ""
     }
   ],
   "users": [
@@ -291,15 +311,6 @@
       "name": "Paloma",
       "lastName": "Luna",
       "email": "lunapaloma1@hotmail.com",
-      "password": "test1234",
-      "roles": "Waiter",
-      "admin": false
-    },
-    {
-      "id": "kQEVYDrjyycz4Ge4ZVmXFFKiTPu2",
-      "name": "Luisa",
-      "lastName": "Lane",
-      "email": "lluisa@hotmail.com",
       "password": "test1234",
       "roles": "Waiter",
       "admin": false
