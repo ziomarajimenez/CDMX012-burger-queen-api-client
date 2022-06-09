@@ -4,6 +4,7 @@
   ![Burger Queen Logo](./src/assets/burger%20queen%20logo%20fondo%20blanco.png)
 
 </div>
+
 ## Contents
 
 * [1. Project description](#1-project-description)
