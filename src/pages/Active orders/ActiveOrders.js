@@ -11,7 +11,7 @@ export const ActiveOrders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3333/orders')
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/orders')
             .then((response) => {
                 return response.json()
             })

@@ -39,7 +39,7 @@ export const VerifyOrder = () => {
     const [lastOrder, setLastOrder] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3333/orders')
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/orders')
             .then((response) => {
                 return response.json()
             })
@@ -63,7 +63,7 @@ export const VerifyOrder = () => {
                 dateProcessed: ""
             })
         };
-        fetch('http://localhost:3333/orders', requestOptions)
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/orders', requestOptions)
             .then(response => response.json())
             .then(() => setIsOpenModal(true))
             /* .then(() => navigate('/')) */

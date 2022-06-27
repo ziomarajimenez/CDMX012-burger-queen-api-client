@@ -10,7 +10,7 @@ export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) =>
         const time = ((dateProcessed - dateEntry)/60000).toFixed()
 
         const requestOptions = {
-            method: 'PATCH',
+            method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 status: 'ready',
@@ -18,7 +18,7 @@ export const OrderPrepared = ({ open, onClose, id, dateEntry, handleUpdate }) =>
                 time: time
             })
         };
-        let idOrder = 'http://localhost:3333/orders/' + id;
+        let idOrder = 'https://62a22b92cd2e8da9b003f634.mockapi.io/orders/' + id;
         //console.log(idOrder);
 
         fetch(idOrder, requestOptions)

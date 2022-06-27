@@ -26,7 +26,7 @@ export const AddProduct = ({open, onClose, handleUpdateProd}) => {
                 menu: values.menu
             })
         };
-        fetch('http://localhost:3333/products', requestOptions)
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/products', requestOptions)
             .then(response => {
                 //console.log('saved');
                 response.json();

@@ -15,7 +15,7 @@ export const AdminView = () => {
     const [ updateEmployees, setUpdate ] = useState(0);
   
     useEffect(() => {
-        fetch('http://localhost:3333/users')
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/users')
             .then((response) => {
                 return response.json()
             })
@@ -33,7 +33,7 @@ export const AdminView = () => {
     const [ updateProd, setUpdateProd ] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost:3333/products')
+        fetch('https://62a22b92cd2e8da9b003f634.mockapi.io/products')
             .then((response) => {
                 return response.json()
             })
