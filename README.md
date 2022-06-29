@@ -100,7 +100,7 @@ Feedback:
 
 ## 6. Deployed project
 
-Link to the deploy project: https://tourmaline-chebakia-a174b7.netlify.app/
+Link to the deploy project: https://burgerqueen-laboratoria.netlify.app/
 
 If you are interested in accessing the waiter, chef or administrator screens, you can [contact us](#7-authors) to get the authorized credentials.
 
